@@ -8,7 +8,7 @@ export const theme = {
       text_detail: '#AEAEB3',
       title: '#47474D',
 
-      line: '#EBEBF0',
+      line: '#344D67',
 
       main: '#6933ff',
       main_light: '#FDEDEF',

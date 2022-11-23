@@ -2,12 +2,19 @@ import { StoreCard2 } from "../../components/StoreCard2";
 import Gas from '../../assets/Gas.png'
 
 import {
-  Container, Image, ImageContainer, Title, InputContainer, TitleButton, Button,
+  Container, Image, ImageContainer, Title, InputContainer, TitleButton, Button, InputDDD, InputContact,
 } from "./styles";
 import { CaretRight } from "phosphor-react";
-import { Input } from "../../components/Input";
+import { InputHTMLAttributes } from 'react';
 
-export function Cadastro() {
+type Props = InputHTMLAttributes<HTMLInputElement> & {
+  label?: string;
+  maxLength?: Number;
+  minLength?: Number;
+}
+
+
+export function Cadastro({...Props} : Props) {
   return (
     <Container>
       <ImageContainer>
@@ -15,24 +22,26 @@ export function Cadastro() {
       </ImageContainer>
       <StoreCard2 />
       <InputContainer>
-        <Input
-          widthValue={24}
-          label="DDD"
-          maxLength={3}
+        <InputDDD
+          {...Props}
+          placeholder="DDD"
+          maxLength={2}
           minLength={1}
+          type="number"
         />
-        <Input
-          widthValue={100}
-          label="Seu Número"
-          maxLength={11}
-          minLength={1} />
+        <InputContact
+        {...Props}
+          placeholder="94444-4444"
+          maxLength={10}
+          minLength={1} 
+          type="number"/>
       </InputContainer>
 
 
       <Title> Usaremos seu número de telefone para informá-lo(a) </Title>
       <Title> sobre sua entrega.</Title>
 
-      <Button>
+      <Button type="submit">
         <CaretRight size={32} />
       </Button>
       <TitleButton>

@@ -6,10 +6,10 @@ export const Container = styled.div`
     z-index: 1;
     position: absolute;
 
-    margin-top: 340px ;
+    margin-top: 305px ;
 
     @media (max-width: 720px){
-        margin-top: 110px ;
+        margin-top: 160px ;
         
     }
 

@@ -1,15 +1,13 @@
 import React from 'react';
-import { Input } from '../Input';
 
 import {
-    Container,
-    CheckBox,
+Container,
 } from './styles';
 
-export function LoadingPay() {
+export function CadastroName() {
     return (
         <Container>
-
+            CadastroName
         </Container>
     )
 }

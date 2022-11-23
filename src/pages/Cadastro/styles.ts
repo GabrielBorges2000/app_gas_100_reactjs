@@ -1,24 +1,22 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width: 100%;
+    width: auto;
+    height: auto;
 
     display: flex;
     flex-direction: column;
-
-    
-    padding-bottom: 20px;
-
     align-items: center ;
 
-    background: ${({theme}) => theme.background_secondary};
+    padding-bottom: 20px;
 
+    background: ${({theme}) => theme.background_secondary};
     
 `;
 
 export const ImageContainer = styled.div`
     width: 100%;
-    height: 450px;
+    height: 430px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,14 +24,13 @@ export const ImageContainer = styled.div`
     background: ${({ theme }) => theme.header};
 
     @media (max-width: 720px){
-        height: 200px;
+        height: 260px;
     }
 
 `;
 
 export const Image = styled.img`
     
-    height: ;
     width: 50%;
 
     padding-bottom: 60px;
@@ -45,18 +42,87 @@ export const Image = styled.img`
 
 
 `;
+export const InputDDD = styled.input`
+    display: flex;
+    justify-content: center;
+
+    border: none;
+    outline:0;
+    width: 50px;
+    height: 40px;
+    border-radius: 3px;
+    padding: 0px 10px ;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    background-color: ${({ theme }) => theme.shape};
+
+    @media (max-width: 720px){
+        padding: 0px 10px 0 10px ;
+            width: 50px;
+
+        @media (max-width: 520px){
+            padding: 0px 10px 0 10px ;
+            width: 50px; 
+                
+                @media (max-width: 420px){
+                    padding: 0px 10px ;
+                    width: 50px;    
+                    
+                    @media (max-width: 420px){
+                        padding: 0px 10px ;
+                            
+                    }
+                }
+        }
+    }
+`;
+
+export const InputContact = styled.input`
+    display: flex;
+    justify-content: center;
+
+    border: none;
+    outline:0;
+    width: 100px;
+    height: 40px;
+    border-radius: 3px;
+    padding: 0px 15px ;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    background-color: ${({ theme }) => theme.shape};
+
+    
+
+
+`;
 
 export const InputContainer = styled.div`
     display: flex;
-    flex-direction: row;
-    margin-top: 40px;
-    padding-bottom: 30px;
+    justify-content: space-around;
 
+    margin-top: 34px ;
+    margin-bottom: 10px ;
+    width: 230px;
+    
+
+        
     @media (max-width: 720px){
+        width: 230px;
 
+        @media (max-width: 520px){
+            width: 50%;
+
+            @media (max-width: 455px){
+                width: 60%;
+
+            }
+
+        }
 
     }
-   
+
 `;
 
 
@@ -76,6 +142,10 @@ export const Button =styled.button`
     border-radius: 50px;
     color: ${({theme}) => theme.background_secondary};
 
+    @media (max-width: 720px) {
+        margin-top: 40px;
+    }
+
 `;
 
 export const TitleButton = styled.p`
@@ -84,7 +154,7 @@ export const TitleButton = styled.p`
     font-size: 12px;
     color: ${({ theme }) => theme.title};
     align-items: center;
-    padding-top: 10px;
+    padding-top: 5px;
 
 `;
 
