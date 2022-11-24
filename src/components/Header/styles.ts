@@ -5,6 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   background: ${({ theme }) => theme.background_secondary};
+  border-bottom: 1px solid ${({ theme }) => theme.text_detail};
 
 `;
 export const Title = styled.p`

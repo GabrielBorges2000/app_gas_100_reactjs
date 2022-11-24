@@ -1,11 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+    width: 100%;
+
+    padding-bottom: 10px;
+
+
+    @media (max-width: 720px){
+        
+    }
 
 
     b {
         font-size: 24px;
     }
+    
 `;
 
 export const Cards = styled.div`
@@ -24,6 +33,9 @@ export const Cards = styled.div`
     @media (max-width: 720px) {
         height: 100px;
     }
+
+    border-bottom: 1px solid ${({ theme }) => theme.text_detail};
+   
 `;
 
 export const Title = styled.p`
@@ -84,6 +96,7 @@ export const CardContainer = styled.div`
     height: 100%;
 
     padding: 16px;
+    
 
     @media (max-width: 720px) {
         padding: 10px;
@@ -97,7 +110,7 @@ export const Details = styled.div`
     flex-direction: row;
     justify-content: space-between;
 
-
+    
 `;
      
 export const NoteContainer = styled.div`
