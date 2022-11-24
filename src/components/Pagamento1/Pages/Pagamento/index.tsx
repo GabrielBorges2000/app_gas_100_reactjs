@@ -1,4 +1,5 @@
 import React from 'react';
+import { SubHeaderPay } from '../../Components/SubHeaderPAy';
 
 import {
 Container,
@@ -7,7 +8,7 @@ Container,
 export function Pagamento() {
     return (
         <Container>
-
+            <SubHeaderPay />
         </Container>
     )
 }

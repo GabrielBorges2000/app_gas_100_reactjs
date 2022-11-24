@@ -8,7 +8,7 @@ import { TabLoading } from "../../components/TabLoading";
 import { Compra } from "./Pages/Compra";
 import { Confirmacao } from "./Pages/Confirmacao";
 import { Pagamento } from "./Pages/Pagamento";
-import { HeaderPay } from "./Components/HeaderPay";
+import { HeaderPay } from "./Components/HeaderPay/HeaderPay";
 
 export function Pagamento1() {
     const [stap, setStap] = useState(0);
@@ -37,7 +37,7 @@ export function Pagamento1() {
 
                 : (stap === 1
                     ? <ContainerPage>
-                        <Confirmacao />
+                        <Pagamento />
                         <PropsButton>
                             <ButtonContainer>
                                 <Button type="submit" onClick={() => handleNext(false)}>
@@ -56,7 +56,7 @@ export function Pagamento1() {
                         </PropsButton>
                     </ContainerPage>
                     : <ContainerPage>
-                        <Pagamento />
+                        <Confirmacao />
                         <PropsButton>
                             <ButtonContainer>
                                 <Button type="submit" onClick={() => handleNext(false)}>

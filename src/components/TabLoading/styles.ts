@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    background: ${({ theme }) => theme.header};   
+    background: ${({ theme }) => theme.header};  
+    border-bottom: 1px solid ${({ theme }) => theme.text_detail}; 
 `;
