@@ -1,20 +1,20 @@
 export const theme = {
-      header: '#5F9DF7',
-      
-      background_primary: '#8D9EFF',
-      background_secondary: '#FFFFFF',
+    header: '#5F9DF7',
 
-      text: '#7A7A80',
-      text_detail: '#AEAEB3',
-      title: '#47474D',
+    background_primary: '#8D9EFF',
+    background_secondary: '#FFFFFF',
 
-      line: '#344D67',
+    text: '#7A7A80',
+    text_detail: '#AEAEB3',
+    title: '#47474D',
 
-      main: '#6933ff',
-      main_light: '#FDEDEF',
-      success: '#03B252',
+    line: '#344D67',
 
-      shape: '#E1E1E8',
-      shape_dark: '#29292E'
+    main: '#6933ff',
+    main_light: '#FDEDEF',
+    success: '#03B252',
 
-  } as const
+    shape: '#E1E1E8',
+    shape_dark: '#29292E'
+
+} as const

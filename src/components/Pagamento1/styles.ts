@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
-
-
 export const Container = styled.div`
-padding-top: 10px;
     
 `;
 
@@ -13,13 +10,13 @@ export const ContainerPage = styled.div`
     
 `;
 
-export const Button =styled.button`
+export const Button = styled.button`
     width: 50px;
     height: 50px;
     border: none;
-    background: ${({theme}) => theme.header};
+    background: ${({ theme }) => theme.header};
     border-radius: 50px;
-    color: ${({theme}) => theme.background_secondary};
+    color: ${({ theme }) => theme.background_secondary};
 
     @media (max-width: 720px) {
     }

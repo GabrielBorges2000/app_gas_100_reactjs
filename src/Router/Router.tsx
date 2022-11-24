@@ -7,9 +7,9 @@ import { Pagamento } from "../pages/Pagamento";
 export function Router() {
   return (
     <Routes>
-      <Route path="/"  element={<Home/>} />
-      <Route path="/Cadastro" element={ <Cadastro/> } />
-      <Route path="/Pagamento" element={ <Pagamento/> } />
+      <Route path="/" element={<Home />} />
+      <Route path="/Cadastro" element={<Cadastro />} />
+      <Route path="/Pagamento" element={<Pagamento />} />
 
     </Routes>
   )

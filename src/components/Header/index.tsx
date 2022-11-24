@@ -1,11 +1,11 @@
 import { ArrowsDownUp, MapPin, Question } from "phosphor-react";
 import {
-  Container, 
-  HeaderContainer, 
-  HeaderContent, 
-  Icon, 
-  Icon1, 
-  Input, 
+  Container,
+  HeaderContainer,
+  HeaderContent,
+  Icon,
+  Icon1,
+  Input,
   Title,
   TitleSecond,
   Icons,
@@ -28,11 +28,11 @@ export function Header() {
             <Question size={24} id="lblQuestion" />
           </Icon>
         </Icons>
-        
+
       </HeaderContainer>
       <HeaderContent>
         <Pesquisa>
-        <TitleSecond>Botijões de 13Kg em:</TitleSecond>
+          <TitleSecond>Botijões de 13Kg em:</TitleSecond>
           <Input placeholder="Digite algo..." />
         </Pesquisa>
         <MapContainer>

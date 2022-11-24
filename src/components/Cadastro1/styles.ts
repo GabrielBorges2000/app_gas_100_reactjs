@@ -10,7 +10,7 @@ export const Container = styled.div`
 
     padding-bottom: 20px;
 
-    background: ${({theme}) => theme.background_secondary};
+    background: ${({ theme }) => theme.background_secondary};
     
 `;
 
@@ -175,13 +175,13 @@ export const Title = styled.p`
 `;
 
 
-export const Button =styled.button`
+export const Button = styled.button`
     width: 50px;
     height: 50px;
     border: none;
-    background: ${({theme}) => theme.header};
+    background: ${({ theme }) => theme.header};
     border-radius: 50px;
-    color: ${({theme}) => theme.background_secondary};
+    color: ${({ theme }) => theme.background_secondary};
 
 `;
 
@@ -194,14 +194,14 @@ export const TitleButton = styled.p`
     padding-top: 5px;
 
 `;
-export const ButtonContainer = styled.p`
+export const ButtonContainer = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
 
 `;
 
-export const Card = styled.p`
+export const Card = styled.div`
 width: 90%;
 z-index: 1;
 
@@ -214,6 +214,7 @@ position: static;
     }
 
 `;
+
 
 
 

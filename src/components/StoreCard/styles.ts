@@ -24,7 +24,7 @@ export const Cards = styled.div`
     width: 90%;
     height: 120px;
 
-    background: ${({theme}) => theme.background_secondary};
+    background: ${({ theme }) => theme.background_secondary};
 
     border-radius: 5px;
     margin: auto;
@@ -112,11 +112,11 @@ export const Details = styled.div`
 
     
 `;
-     
+
 export const NoteContainer = styled.div`
      
 `;
-     
+
 export const Note = styled.p`
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
@@ -124,7 +124,7 @@ export const Note = styled.p`
     color: ${({ theme }) => theme.text};
 
 `;
-     
+
 export const NoteNumber = styled.p`
     display: flex;
     font-family: 'Roboto', sans-serif;
@@ -135,7 +135,7 @@ export const NoteNumber = styled.p`
         font-size: 14px;
     }
 `;
-     
+
 export const Icon = styled.img`
     width: 15px;
 
@@ -144,18 +144,18 @@ export const Icon = styled.img`
     margin-left: 5px;
      
 `;
-     
+
 export const TimeContainer = styled.div`
      
 `;
-     
+
 export const Time = styled.p`
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     margin-bottom: 5px;
     color: ${({ theme }) => theme.text};
 `;
-     
+
 export const TimeNumber = styled.p`
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -165,11 +165,11 @@ export const TimeNumber = styled.p`
         font-size: 14px;
     }
 `;
-     
+
 export const AmountContainer = styled.div`
      
 `;
-     
+
 export const Amount = styled.p`
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
@@ -185,4 +185,3 @@ export const AmountNumber = styled.p`
         font-size: 14px;
     }
 `;
-     

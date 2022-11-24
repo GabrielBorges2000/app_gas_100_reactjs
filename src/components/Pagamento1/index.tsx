@@ -1,73 +1,81 @@
 import {
     Container, PropsButton, TitleButton, Button, ButtonContainer, ContainerPage
-  } from "./styles";
-  import { CaretLeft, CaretRight } from "phosphor-react";
-  
-  import { useState } from 'react';
-  import { TabLoading } from "../../components/TabLoading";
+} from "./styles";
+import { CaretLeft, CaretRight } from "phosphor-react";
+
+import { useState } from 'react';
+import { TabLoading } from "../../components/TabLoading";
+import { Compra } from "./Pages/Compra";
+import { Confirmacao } from "./Pages/Confirmacao";
+import { Pagamento } from "./Pages/Pagamento";
+import { HeaderPay } from "./Components/HeaderPay";
 
 export function Pagamento1() {
     const [stap, setStap] = useState(0);
 
-    function handleNext(isNext: boolean = true){
+    function handleNext(isNext: boolean = true) {
         setStap(isNext ? stap + 1 : stap - 1);
     }
     return (
         <Container>
-            <TabLoading stap={stap} />  
-           
-           {stap === 0
-           ? <ContainerPage>
+            {stap === 0 ? <HeaderPay /> : (stap === 1 ? <ContainerPage /> : <ContainerPage />)}
 
-            <ButtonContainer>
-            <Button type="submit" onClick={() => handleNext(true)}>
-            {/* <Button type="submit" onClick={() => handleNext(true)}> */}
-            <CaretRight size={32} />
-           </Button>
-           <TitleButton>Next</TitleButton>
-           </ButtonContainer>
+            <TabLoading stap={stap} />
 
-           </ContainerPage>
-            
-            : (stap === 1
-              ? <ContainerPage>
-              <PropsButton>
-          <ButtonContainer>
-          <Button type="submit" onClick={() => handleNext(false)}>
-          <CaretLeft size={32} />
-           
-         </Button>
-         <TitleButton>Back</TitleButton>
-         </ButtonContainer>
+            {stap === 0
+                ? <ContainerPage>
+                    <Compra />
+                    <ButtonContainer>
+                        <Button type="submit" onClick={() => handleNext(true)}>
+                            {/* <Button type="submit" onClick={() => handleNext(true)}> */}
+                            <CaretRight size={32} />
+                        </Button>
+                        <TitleButton>Next</TitleButton>
+                    </ButtonContainer>
 
-          <ButtonContainer>
-          <Button type="submit" onClick={() => handleNext(true)}>
-          <CaretRight size={32} />
-         </Button>
-         <TitleButton>Next</TitleButton>
-         </ButtonContainer>
-          </PropsButton>
-          </ContainerPage>
-              : <ContainerPage>
-              <PropsButton>
-          <ButtonContainer>
-          <Button type="submit" onClick={() => handleNext(false)}>
-          <CaretLeft size={32} />
-           
-         </Button>
-         <TitleButton>Back</TitleButton>
-         </ButtonContainer>
+                </ContainerPage>
 
-          <ButtonContainer>
-          <Button type="submit" onClick={() => handleNext(true)}>
-          <CaretRight size={32} />
-         </Button>
-         <TitleButton>Next</TitleButton>
-         </ButtonContainer>
-          </PropsButton>
-          </ContainerPage>
-              )             
-        }  
-    </Container>
+                : (stap === 1
+                    ? <ContainerPage>
+                        <Confirmacao />
+                        <PropsButton>
+                            <ButtonContainer>
+                                <Button type="submit" onClick={() => handleNext(false)}>
+                                    <CaretLeft size={32} />
+
+                                </Button>
+                                <TitleButton>Back</TitleButton>
+                            </ButtonContainer>
+
+                            <ButtonContainer>
+                                <Button type="submit" onClick={() => handleNext(true)}>
+                                    <CaretRight size={32} />
+                                </Button>
+                                <TitleButton>Next</TitleButton>
+                            </ButtonContainer>
+                        </PropsButton>
+                    </ContainerPage>
+                    : <ContainerPage>
+                        <Pagamento />
+                        <PropsButton>
+                            <ButtonContainer>
+                                <Button type="submit" onClick={() => handleNext(false)}>
+                                    <CaretLeft size={32} />
+
+                                </Button>
+                                <TitleButton>Back</TitleButton>
+                            </ButtonContainer>
+
+                            <ButtonContainer>
+                                <Button type="submit" onClick={() => handleNext(true)}>
+                                    <CaretRight size={32} />
+                                </Button>
+                                <TitleButton>Next</TitleButton>
+                            </ButtonContainer>
+                        </PropsButton>
+                    </ContainerPage>
+                )
+            }
+        </Container>
     )
 }

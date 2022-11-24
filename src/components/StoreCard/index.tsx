@@ -14,7 +14,7 @@ export function StoreCard() {
                 <LogoContainer>
                     <Logo id='lblLogo'>SuperGasbraz</Logo>
                 </LogoContainer>
-                
+
                 <CardContainer>
                     <Title id="lblTitle">Tonho Gás</Title>
                     <Details>
@@ -88,8 +88,8 @@ export function StoreCard() {
                     </Details>
                 </CardContainer>
             </Cards> */}
-           
-           
+
+
 
         </Container>
     )
