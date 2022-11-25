@@ -151,6 +151,7 @@ export const InputContainer = styled.form`
         
     @media (max-width: 720px){
         width: 230px;
+        margin-top: 5px;
 
         @media (max-width: 520px){
             width: 45%;

@@ -19,6 +19,7 @@ export function Pagamento() {
             <ButtonPay 
                 titleName='Crédito'
                 img={true}
+                
             />
             <ButtonPay 
                 titleName='Débito'

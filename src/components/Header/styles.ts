@@ -14,7 +14,7 @@ export const Title = styled.p`
   font-weight: bold;
   margin-bottom: 10px ;
 
-  color: ${({ theme }) => theme.shape};
+  color: ${({ theme }) => theme.background_secondary};
     
 `;
 export const Icons = styled.a` 
@@ -27,7 +27,7 @@ export const Icon = styled.button`
   display: flex;
   justify-content: space-between;
   background-color: transparent;
-  color: ${({ theme }) => theme.shape};
+  color: ${({ theme }) => theme.background_secondary};
   font-weight: bold;
   border: none;
   margin-left: 5px;

@@ -15,10 +15,11 @@ type StoreCardProps = {
     timeSeconds?: number;
     amount?: number;
     amountCentus?: number;
+    navegation?: boolean;
 }
 
 
-export function StoreCard({ titleClient, note, timeMinutes, timeSeconds, amount, amountCentus, logoName, ...rest }: StoreCardProps) {
+export function StoreCard({ titleClient, note, timeMinutes, timeSeconds, amount, amountCentus, logoName, navegation }: StoreCardProps) {
 
     return (
         <Container>

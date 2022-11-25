@@ -37,7 +37,7 @@ export function ButtonPay({ title, titleName, img, card, diner }: Props) {
                 </ContentContainer>
             </InfoContainer>
 
-            <ButtonCheck>{/* <Check size={23} /> */}
+            <ButtonCheck>
                 <ControlledCheckbox />
             </ButtonCheck>
         </Container>

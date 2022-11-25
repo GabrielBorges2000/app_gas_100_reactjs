@@ -25,15 +25,15 @@ export const Container = styled.div`
     }
 
     a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     }
 
     a:active {
-    text-decoration: underline;
+    text-decoration: none;
     }
 
-    a{
-        color: ${({theme})=> theme.text_dark};
+    a {
+    color: ${({theme})=> theme.text_dark};
     }
 
 
@@ -46,16 +46,16 @@ export const Cards = styled.div`
     flex-direction: row;
 
     width: 90%;
-    height: 120px;
+    height: 100%;
 
     background: ${({ theme }) => theme.background_secondary};
 
     border-radius: 5px;
-    margin: auto;
+    margin: 5%;
     margin-top: 20px;
 
     @media (max-width: 720px) {
-        height: 100px;
+        height: 100%;
     }
 
     border-bottom: 1px solid ${({ theme }) => theme.text_detail};
@@ -78,7 +78,7 @@ export const LogoContainer = styled.p`
     
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    background: #FD841F;
+    background: ${({ theme }) => theme.orange};
     color: ${({ theme }) => theme.background_secondary};
 `;
 export const LogoContainer2 = styled.p`

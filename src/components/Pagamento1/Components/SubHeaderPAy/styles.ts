@@ -44,7 +44,7 @@ export const TitleAmount = styled.p`
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
     font-weight: regular;
-    color: ${({theme}) => theme.text};
+    color: ${({theme}) => theme.text_dark};
 
     b{
       font-size: 20px;  
