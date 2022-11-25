@@ -2,13 +2,18 @@ import React from 'react';
 import { SubHeaderPay } from '../../Components/SubHeaderPAy';
 
 import {
-Container,
+    Container,
 } from './styles';
 
 export function Compra() {
     return (
         <Container>
-            <SubHeaderPay/>
+            <SubHeaderPay
+                title='Supergasbras - Botijão de 13kg'
+                quantidade={1}
+                amount={79}
+                amountCentus={99}
+            />
         </Container>
     )
 }

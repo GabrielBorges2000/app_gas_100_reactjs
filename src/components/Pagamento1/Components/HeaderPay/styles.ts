@@ -7,8 +7,6 @@ export const Container = styled.div`
     justify-content: space-evenly;
     align-items: center;
 
-    margin-bottom: 10px;
-
     background: ${({ theme }) => theme.header};
 
     button {
@@ -17,7 +15,7 @@ export const Container = styled.div`
 
 `;
 
-export const BackButton = styled.button`
+export const BackButton = styled.a`
 
     background-color: transparent;
     color: ${({ theme }) => theme.background_secondary};

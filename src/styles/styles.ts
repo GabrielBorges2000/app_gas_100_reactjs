@@ -6,6 +6,7 @@ export const theme = {
 
     text: '#7A7A80',
     text_detail: '#AEAEB3',
+    text_dark: '#000000',
     title: '#47474D',
 
     line: '#344D67',

@@ -1,4 +1,4 @@
-import { CaretRight } from 'phosphor-react';
+import { CaretLeft, CaretRight } from 'phosphor-react';
 import React from 'react';
 import { StoreCard } from '../StoreCard';
 import Gas from '../../assets/Gas.png'
@@ -6,8 +6,9 @@ import { InputHTMLAttributes } from 'react';
 
 import {
   Button,
-  Container, Image, ImageContainer, InputContact, InputContainer, InputDDD, InputName, Title, Card, ButtonContainer, TitleButton
+  Container, Image, ButtonProps, ImageContainer, InputContact, InputContainer, InputDDD, InputName, Title, Card, ButtonContainer, TitleButton
 } from './styles';
+import { NavLink } from 'react-router-dom';
 
 type Props = InputHTMLAttributes<HTMLInputElement> & {
   label?: string;
@@ -22,7 +23,17 @@ export function Cadastro1({ ...Props }: Props) {
         <Image src={Gas} />
       </ImageContainer>
 
-      <Card><StoreCard /></Card>
+      <Card>
+        <StoreCard
+          logoName="SupergasBraz"
+          titleClient="Tonho Gás"
+          note={4.8}
+          timeMinutes={15}
+          timeSeconds={30}
+          amount={79}
+          amountCentus={99}
+        />
+      </Card>
 
       <InputName
         {...Props}
@@ -52,13 +63,25 @@ export function Cadastro1({ ...Props }: Props) {
 
       <Title> Usaremos seu número de telefone para informá-lo(a) </Title>
       <Title> sobre sua entrega.</Title>
+      <ButtonProps>
+        <ButtonContainer>
+          <NavLink to="/">
+            <Button type="button">
+              <CaretLeft size={32} />
+            </Button>
+          </NavLink>
+          <TitleButton>Voltar</TitleButton>
+        </ButtonContainer>
 
-      <ButtonContainer>
-        <Button type="submit">
-          <CaretRight size={32} />
-        </Button>
-        <TitleButton>Próximo</TitleButton>
-      </ButtonContainer>
+        <ButtonContainer>
+          <NavLink to="/Pagamento">
+            <Button type="submit">
+              <CaretRight size={32} />
+            </Button>
+          </NavLink>
+          <TitleButton>Próximo</TitleButton>
+        </ButtonContainer>
+      </ButtonProps>
 
     </Container>
   )

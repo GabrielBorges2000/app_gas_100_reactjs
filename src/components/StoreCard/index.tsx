@@ -1,4 +1,5 @@
 /* import { Star } from "phosphor-react"; */
+import { NavLink } from 'react-router-dom';
 import Star from '../../assets/star.svg'
 
 import {
@@ -21,31 +22,35 @@ export function StoreCard({ titleClient, note, timeMinutes, timeSeconds, amount,
 
     return (
         <Container>
-            <Cards >
-                <LogoContainer>
-                    <Logo id='lblLogo'>{logoName}</Logo>
-                </LogoContainer>
+            <NavLink to="/Cadastro" style={{
 
-                <CardContainer>
-                    <Title id="lblTitle">{titleClient}</Title>
-                    <Details>
-                        <NoteContainer>
-                            <Note>Nota</Note>
-                            <NoteNumber id="lblNota" >
-                                <b>{note}</b> <Icon src={Star} />
-                            </NoteNumber>
-                        </NoteContainer>
-                        <TimeContainer>
-                            <Time>Tempo Médio</Time>
-                            <TimeNumber id="lblTime"><b>{timeMinutes}-{timeSeconds}</b> min</TimeNumber>
-                        </TimeContainer>
-                        <AmountContainer>
-                            <Amount>Preço</Amount>
-                            <AmountNumber id="lblAmount">R$<b>{amount}</b>.{amountCentus}</AmountNumber>
-                        </AmountContainer>
-                    </Details>
-                </CardContainer>
-            </Cards>
+            }}>
+                <Cards >
+                    <LogoContainer>
+                        <Logo id='lblLogo'>{logoName}</Logo>
+                    </LogoContainer>
+
+                    <CardContainer>
+                        <Title id="lblTitle">{titleClient}</Title>
+                        <Details>
+                            <NoteContainer>
+                                <Note>Nota</Note>
+                                <NoteNumber id="lblNota" >
+                                    <b>{note}</b> <Icon src={Star} />
+                                </NoteNumber>
+                            </NoteContainer>
+                            <TimeContainer>
+                                <Time>Tempo Médio</Time>
+                                <TimeNumber id="lblTime"><b>{timeMinutes}-{timeSeconds}</b> min</TimeNumber>
+                            </TimeContainer>
+                            <AmountContainer>
+                                <Amount>Preço</Amount>
+                                <AmountNumber id="lblAmount">R$<b>{amount}</b>.{amountCentus}</AmountNumber>
+                            </AmountContainer>
+                        </Details>
+                    </CardContainer>
+                </Cards>
+            </NavLink>
 
 
             {/* <Cards>

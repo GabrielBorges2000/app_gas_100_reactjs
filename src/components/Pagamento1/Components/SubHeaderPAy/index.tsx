@@ -5,12 +5,20 @@ import {
     TitleAmount,
  } from "./styles";
 
-export function SubHeaderPay(){
+ type Props = {
+    quantidade?: number;
+    title?: string;
+    amount?: number;
+    amountCentus?: number;
+
+ }
+
+export function SubHeaderPay({ amount, amountCentus, quantidade, title} : Props){
     return(
         <Container>
-            <TitleNumber>1</TitleNumber>
-            <Title>Supergasbras - Botijão de 13kg</Title>
-            <TitleAmount>R$<b>79,99</b></TitleAmount>
+            <TitleNumber>{quantidade}</TitleNumber>
+            <Title>{title}</Title>
+            <TitleAmount>R$<b>{amount},{amountCentus}</b></TitleAmount>
         </Container>
     )
 }

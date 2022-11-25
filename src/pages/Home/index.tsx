@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { Header } from "../../components/Header";
 import { StoreCard } from "../../components/StoreCard";
 import { Container, } from "./styled";
@@ -7,7 +8,7 @@ export function Home() {
     <Container>
       <Header />
       <StoreCard
-      logoName="SupergasBraz"
+        logoName="SupergasBraz"
         titleClient="Tonho Gás"
         note={4.8}
         timeMinutes={15}

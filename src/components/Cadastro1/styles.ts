@@ -16,7 +16,7 @@ export const Container = styled.div`
 
 export const ImageContainer = styled.div`
     width: 100%;
-    height: 430px;
+    height: 375px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -156,7 +156,17 @@ export const InputContainer = styled.form`
             width: 45%;
 
             @media (max-width: 455px){
-                width: 60%;
+                width: 50%;
+
+                @media (max-width: 455px){
+                width: 58%;
+
+                    @media (max-width: 780px){
+                        width: 60%;
+
+                    }
+
+                }
 
             }
 
@@ -213,6 +223,18 @@ position: static;
 @media (max-width: 720px) {
     margin-top: -100px;
     }
+
+`;
+export const ButtonProps = styled.div`
+    width: 100%;
+    margin-top: 20px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    
 
 `;
 

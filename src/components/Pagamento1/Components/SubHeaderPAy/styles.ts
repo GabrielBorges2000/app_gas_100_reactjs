@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    height: 40px;
+    height: 50px;
+    width: 100%;
 
     display: flex;
     flex-direction: row;
@@ -9,9 +10,16 @@ export const Container = styled.div`
     align-items: center;
 
     border-bottom: 1px solid ${({ theme }) => theme.text_detail};
+    margin-bottom: 10px;
+
+    background: ${({ theme }) => theme.background_secondary};
 `;
 
 export const TitleNumber = styled.p`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     width: 30px;
     height: 30px;
 
@@ -21,7 +29,7 @@ export const TitleNumber = styled.p`
 
     border-radius: 50%;
 
-    color: ${({theme}) => theme.text} ;
+    color: ${({theme}) => theme.background_secondary} ;
     background-color: ${({ theme }) => theme.orange};
 `;
 

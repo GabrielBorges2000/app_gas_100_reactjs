@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    
+    height: 100vh;
+    background: ${({ theme }) => theme.shape};
 `;
 
 export const ContainerPage = styled.div`
@@ -32,11 +33,12 @@ export const TitleButton = styled.p`
     padding-top: 5px;
 
 `;
-export const ButtonContainer = styled.p`
-display: flex;
-flex-direction: column;
-align-items: center;
+export const ButtonContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
+    background: transparent;
 `;
 export const PropsButton = styled.p`
     margin: 0 5%;
