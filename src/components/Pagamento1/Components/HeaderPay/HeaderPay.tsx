@@ -8,13 +8,17 @@ import {
     QuestionButton,
 } from './styles';
 
-export function HeaderPay() {
+type Props = {
+    title: string;
+}
+
+export function HeaderPay({title} : Props) {
     return (
         <Container>
             <BackButton>
                 <CaretLeft size={32} />
             </BackButton>
-            <Title>Selecionar Produtos</Title>
+            <Title>{title}</Title>
             <QuestionButton>
                 <Question size={24} id="lblQuestion" />
             </QuestionButton>

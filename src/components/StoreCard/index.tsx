@@ -6,31 +6,42 @@ import {
 } from "./styles";
 
 
+type StoreCardProps = {
+    logoName?: string;
+    titleClient?: string;
+    note?: number;
+    timeMinutes?: number;
+    timeSeconds?: number;
+    amount?: number;
+    amountCentus?: number;
+}
 
-export function StoreCard() {
+
+export function StoreCard({ titleClient, note, timeMinutes, timeSeconds, amount, amountCentus, logoName, ...rest }: StoreCardProps) {
+
     return (
         <Container>
             <Cards >
                 <LogoContainer>
-                    <Logo id='lblLogo'>SuperGasbraz</Logo>
+                    <Logo id='lblLogo'>{logoName}</Logo>
                 </LogoContainer>
 
                 <CardContainer>
-                    <Title id="lblTitle">Tonho Gás</Title>
+                    <Title id="lblTitle">{titleClient}</Title>
                     <Details>
                         <NoteContainer>
                             <Note>Nota</Note>
                             <NoteNumber id="lblNota" >
-                                <b>4,8</b> <Icon src={Star} />
+                                <b>{note}</b> <Icon src={Star} />
                             </NoteNumber>
                         </NoteContainer>
                         <TimeContainer>
                             <Time>Tempo Médio</Time>
-                            <TimeNumber id="lblTime"><b>15-30</b> min</TimeNumber>
+                            <TimeNumber id="lblTime"><b>{timeMinutes}-{timeSeconds}</b> min</TimeNumber>
                         </TimeContainer>
                         <AmountContainer>
                             <Amount>Preço</Amount>
-                            <AmountNumber id="lblAmount">R$<b>79</b>.99</AmountNumber>
+                            <AmountNumber id="lblAmount">R$<b>{amount}</b>.{amountCentus}</AmountNumber>
                         </AmountContainer>
                     </Details>
                 </CardContainer>

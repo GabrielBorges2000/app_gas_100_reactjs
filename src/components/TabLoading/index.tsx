@@ -15,7 +15,12 @@ const steps = [
 
 export function TabLoading({ stap = 0 } : Props) {
   return (
-    <Box sx={{ width: '100%' }}>
+    <Box sx={{ 
+      width: '100%',
+      marginTop: "15px",
+      paddingBottom: "10px",
+      borderBottom: "1px solid #AEAEB3",
+      }}>
       <Stepper activeStep={stap} alternativeLabel>
         {steps.map((label) => (
           <Step key={label} sx={{ }}>

@@ -15,6 +15,6 @@ export const theme = {
     success: '#03B252',
 
     shape: '#E1E1E8',
-    shape_dark: '#29292E'
+    orange: '#ff3d00'
 
 } as const

@@ -18,7 +18,7 @@ export function Pagamento1() {
     }
     return (
         <Container>
-            {stap === 0 ? <HeaderPay /> : (stap === 1 ? <ContainerPage /> : <ContainerPage />)}
+            {stap === 0 ? <HeaderPay title="Selecionar Produto" /> : (stap === 1 ? <HeaderPay title="Metodo de Pagamento" /> : <ContainerPage />)}
 
             <TabLoading stap={stap} />
 
