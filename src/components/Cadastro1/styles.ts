@@ -103,7 +103,6 @@ export const InputName = styled.input`
     display: flex;
     justify-content: space-around;
 
-    margin-top: 16px ;
     margin-bottom: 5px ;
     width: 180px;
 

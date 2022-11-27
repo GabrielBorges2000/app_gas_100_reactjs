@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 75%;
-    height: 180px;
+    height: 250px;
 
     display: flex;
     justify-content: space-between;
@@ -26,6 +26,9 @@ export const Container = styled.div`
         font-size: 18px;
     }
 
+    @media (max-width: 720px){
+        height: 180px;
+    }
 `;
 
 
