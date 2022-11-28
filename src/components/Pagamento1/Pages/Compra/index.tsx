@@ -19,6 +19,7 @@ export function Compra() {
                 amountCentus={99}
             />
             <CardHeader
+          
                 titleClient='Tonho Gas'
                 amount={79}
                 amountCentus={99}
@@ -27,9 +28,7 @@ export function Compra() {
                 timeSeconds={30}
                 logoName='SupergasBras'
             />
-            <CardContent
-
-            />
+            <CardContent />
         </Container>
     )
 }

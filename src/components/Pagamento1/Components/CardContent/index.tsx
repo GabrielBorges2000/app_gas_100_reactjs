@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import Gas from '../../assets/Gas_Cozinha.png'
-import { Button } from './components/Button';
+import { ButtonGas } from './components/ButtonGas';
 import { Title } from './components/Title';
 
 import {
@@ -13,7 +13,7 @@ import {
 } from './styles';
 
 export function CardContent() {
-
+    const [amount, setAmount] = useState(1);
 
     return (
         <Container>
@@ -24,17 +24,17 @@ export function CardContent() {
                 amountCentus={99}
             />
             <ButtonContainer>
-                <Button
-
-                    type={false}
+                <ButtonGas
+                    onClick={() => (amount - 1) > 0 && setAmount(amount - 1)}
+                    typeButton={false}
                 />
                 <GasContainer>
-                    <Number>1</Number>
+                    <Number>{amount}</Number>
                     <img src={Gas} />
                 </GasContainer>
-                <Button
-
-                    type={true}
+                <ButtonGas
+                    onClick={() => setAmount(amount + 1)}
+                    typeButton={true}
                 />
             </ButtonContainer>
         </Container>
