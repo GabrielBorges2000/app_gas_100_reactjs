@@ -1,4 +1,4 @@
-import React from 'react';
+import { useState } from 'react';
 import { CardContent } from '../../Components/CardContent';
 import { CardHeader } from '../../Components/CardHeader';
 import { SubHeaderPay } from '../../Components/SubHeaderPAy';
@@ -7,7 +7,9 @@ import {
     Container,
 } from './styles';
 
+
 export function Compra() {
+
     return (
         <Container>
             <SubHeaderPay
@@ -26,7 +28,7 @@ export function Compra() {
                 logoName='SupergasBras'
             />
             <CardContent
-            
+
             />
         </Container>
     )

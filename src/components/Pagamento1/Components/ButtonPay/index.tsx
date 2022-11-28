@@ -1,4 +1,4 @@
-import { Check, CheckCircle, Coins, CreditCard } from 'phosphor-react';
+import { Check, Coins, CreditCard } from 'phosphor-react';
 import React from 'react';
 import { ImageContainer } from '../ImageContainer';
 import ControlledCheckbox from './ControlledCheckbox';

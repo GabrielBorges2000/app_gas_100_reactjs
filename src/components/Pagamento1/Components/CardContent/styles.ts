@@ -8,7 +8,7 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    padding: 0 20px;
+    padding: 0 40px;
 
     margin-bottom: 10px ;
 
@@ -26,9 +26,69 @@ export const Container = styled.div`
         font-size: 18px;
     }
 
+    img {
+        width: 150px;
+        margin: 0;
+
+        @media (max-width: 720px){
+            width: 80px;
+        }
+    }
+
     @media (max-width: 720px){
+        width: 75%;
         height: 180px;
+        padding: 0 20px;
     }
 `;
+export const GasContainer = styled.div`
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+`;
+
+export const Number = styled.p`
+
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+
+    border-radius: 50%;
+
+    color: ${({ theme }) => theme.background_secondary} ;
+    background-color: ${({ theme }) => theme.orange};
+
+    z-index: 1;
+    position: absolute;
+
+    @media (max-width: 720px){
+        width: 25px;
+        height: 25px;
+        font-size: 12px;
+    }
+`;
+
+export const ButtonContainer = styled.div`
+    width: 50%;
+    
+    display: flex;
+    flex: row;
+    align-items: center;
+`;
+
+
+
 
 

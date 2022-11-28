@@ -12,7 +12,7 @@ export const ContainerPage = styled.div`
 `;
 
 export const Button = styled.button`
-    width: 50px;
+    width: 100px;
     height: 50px;
     border: none;
     background: ${({ theme }) => theme.header};

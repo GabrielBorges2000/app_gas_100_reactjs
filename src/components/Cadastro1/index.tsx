@@ -6,17 +6,13 @@ import { InputHTMLAttributes } from 'react';
 
 import {
   Button,
-  Container, Image, ButtonProps, ImageContainer, InputContact, InputContainer, InputDDD, InputName, Title, Card, ButtonContainer, TitleButton
+  Container, Image, ButtonProps, ImageContainer, InputContact, InputContainer, InputDDD, InputName, Title, Card, ButtonContainer, TitleButton, InputLocation
 } from './styles';
 import { NavLink } from 'react-router-dom';
 
-type Props = InputHTMLAttributes<HTMLInputElement> & {
-  label?: string;
-  maxLength?: Number;
-  minLength?: Number;
-}
 
-export function Cadastro1({ ...Props }: Props) {
+
+export function Cadastro1() {
   return (
     <Container>
       <ImageContainer>
@@ -25,6 +21,7 @@ export function Cadastro1({ ...Props }: Props) {
 
       <Card>
         <StoreCard
+          type='orange'
           logoName="SupergasBraz"
           titleClient="Tonho Gás"
           note={4.8}
@@ -36,22 +33,25 @@ export function Cadastro1({ ...Props }: Props) {
       </Card>
 
       <InputName
-        {...Props}
         placeholder="Nome"
         maxLength={30}
         minLength={1}
         type="Text"
       />
+      <InputLocation
+        placeholder="Seu endereço"
+        maxLength={50}
+        minLength={1}
+        type="Text"
+      />
       <InputContainer >
         <InputDDD
-          {...Props}
           placeholder="DDD"
           maxLength={2}
           minLength={1}
           type="number"
         />
         <InputContact
-          {...Props}
           placeholder="94444-4444"
           maxLength={10}
           minLength={1}

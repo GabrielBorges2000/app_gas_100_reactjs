@@ -1,5 +1,4 @@
 import { CaretLeft, Question } from 'phosphor-react';
-import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import {
@@ -13,14 +12,16 @@ type Props = {
     title?: string;
     back?: boolean;
     option?: boolean;
+    to?: boolean;
 }
 
-export function HeaderPay({ title, back, option }: Props) {
+export function HeaderPay({ title, back, option, to }: Props) {
+
     return (
         <Container>
-            <NavLink to="/Cadastro">
+            <NavLink to='/cadastro'>
                 <BackButton>
-                    {back === true ? <CaretLeft size={32} /> : <div />}
+                    {back === true ?   <CaretLeft size={32} /> : <div />}
                 </BackButton>
             </NavLink>
             <Title>{title}</Title>

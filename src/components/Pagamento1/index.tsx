@@ -9,6 +9,7 @@ import { Compra } from "./Pages/Compra";
 import { Confirmacao } from "./Pages/Confirmacao";
 import { Pagamento } from "./Pages/Pagamento";
 import { HeaderPay } from "./Components/HeaderPay/HeaderPay";
+import { NavLink } from "react-router-dom";
 
 export function Pagamento1() {
     const [stap, setStap] = useState(0);

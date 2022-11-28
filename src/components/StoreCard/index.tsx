@@ -3,11 +3,11 @@ import { NavLink } from 'react-router-dom';
 import Star from '../../assets/star.svg'
 
 import {
-    Amount, AmountContainer, AmountNumber, CardContainer, Cards, Container, Details, Icon, Logo, LogoContainer, LogoContainer2, LogoContainer3, Note, NoteContainer, NoteNumber, Time, TimeContainer, TimeNumber, Title
+    Amount, AmountContainer, AmountNumber, CardContainer, Cards, Container, Details, Icon, Logo, LogoContainer, Note, NoteContainer, NoteNumber, Time, TimeContainer, TimeNumber, Title
 } from "./styles";
 
-
 type StoreCardProps = {
+    type: 'orange' | 'gray' | 'yellow' | 'green';
     logoName?: string;
     titleClient?: string;
     note?: number;
@@ -18,16 +18,13 @@ type StoreCardProps = {
     navegation?: boolean;
 }
 
-
-export function StoreCard({ titleClient, note, timeMinutes, timeSeconds, amount, amountCentus, logoName, navegation }: StoreCardProps) {
+export function StoreCard({ titleClient, note, timeMinutes, timeSeconds, amount, amountCentus, logoName, navegation, type}: StoreCardProps) {
 
     return (
         <Container>
-            <NavLink to="/Cadastro" style={{
-
-            }}>
+            <NavLink to="/Cadastro" >
                 <Cards >
-                    <LogoContainer>
+                    <LogoContainer type={type}>
                         <Logo id='lblLogo'>{logoName}</Logo>
                     </LogoContainer>
 
@@ -52,62 +49,6 @@ export function StoreCard({ titleClient, note, timeMinutes, timeSeconds, amount,
                     </CardContainer>
                 </Cards>
             </NavLink>
-
-
-            {/* <Cards>
-                <LogoContainer2>
-                    <Logo id='lblLogo'>Multimarcas</Logo>
-                </LogoContainer2>
-                
-                <CardContainer>
-                    <Title id="lblTitle">Limagás</Title>
-                    <Details>
-                        <NoteContainer>
-                            <Note>Nota</Note>
-                            <NoteNumber id="lblNota" >
-                                <b>4,8</b> <Icon src={Star} />
-                            </NoteNumber>
-                        </NoteContainer>
-                        <TimeContainer>
-                            <Time>Tempo Médio</Time>
-                            <TimeNumber id="lblTime"><b>15-30</b> min</TimeNumber>
-                        </TimeContainer>
-                        <AmountContainer>
-                            <Amount>Preço</Amount>
-                            <AmountNumber id="lblAmount">R$<b>79</b>.99</AmountNumber>
-                        </AmountContainer>
-                    </Details>
-                </CardContainer>
-            </Cards>
-
-            <Cards>
-                <LogoContainer3>
-                    <Logo id='lblLogo'>COPAGAZ</Logo>
-                </LogoContainer3>
-                
-                <CardContainer>
-                    <Title id="lblTitle">Ramogás</Title>
-                    <Details>
-                        <NoteContainer>
-                            <Note>Nota</Note>
-                            <NoteNumber id="lblNota" >
-                                <b>4,8</b> <Icon src={Star} />
-                            </NoteNumber>
-                        </NoteContainer>
-                        <TimeContainer>
-                            <Time>Tempo Médio</Time>
-                            <TimeNumber id="lblTime"><b>15-30</b> min</TimeNumber>
-                        </TimeContainer>
-                        <AmountContainer>
-                            <Amount>Preço</Amount>
-                            <AmountNumber id="lblAmount">R$<b>79</b>.99</AmountNumber>
-                        </AmountContainer>
-                    </Details>
-                </CardContainer>
-            </Cards> */}
-
-
-
         </Container>
     )
 }

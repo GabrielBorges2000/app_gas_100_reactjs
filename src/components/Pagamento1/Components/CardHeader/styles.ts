@@ -8,7 +8,7 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
 
-    padding: 0 20px;
+padding: 0 40px;    
 
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -22,6 +22,11 @@ export const Container = styled.div`
     b {        
         font-weight: bold;
         font-size: 18px;
+    }
+
+    @media(max-width: 720px) {
+        width: 75%;
+        padding: 0 20px;
     }
 
 

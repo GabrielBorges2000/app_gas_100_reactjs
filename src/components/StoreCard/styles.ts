@@ -1,14 +1,11 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
+
+interface StoreCardProps {
+    type: 'orange' | 'gray' | 'yellow' | 'green';
+}
 
 export const Container = styled.div`
     width: 100%;
-
-    
-
-
-    @media (max-width: 720px){
-        
-    }
 
 
     b {
@@ -37,8 +34,6 @@ export const Container = styled.div`
     }
 
 
-    
-    
 `;
 
 export const Cards = styled.div`
@@ -53,6 +48,7 @@ export const Cards = styled.div`
     border-radius: 5px;
     margin: 5%;
     margin-top: 20px;
+    margin-bottom: 20px;
 
     @media (max-width: 720px) {
         height: 100%;
@@ -70,7 +66,7 @@ export const Title = styled.p`
     color: ${({ theme }) => theme.text};
 
 `;
-export const LogoContainer = styled.p`
+export const LogoContainer = styled.p<StoreCardProps>`
     width: 40px;
     display: flex;
     align-items: center;
@@ -78,32 +74,27 @@ export const LogoContainer = styled.p`
     
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    background: ${({ theme }) => theme.orange};
     color: ${({ theme }) => theme.background_secondary};
-`;
-export const LogoContainer2 = styled.p`
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    background: ${({ theme }) => theme.text};
-    color: ${({ theme }) => theme.background_secondary};
-`;
-export const LogoContainer3 = styled.p`
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    background: #F49D1A;
-    color: ${({ theme }) => theme.background_secondary};
-`;
 
+    ${({ type }) => type === 'orange' && css`
+    background: ${({theme}) => theme.orange};
+    `};
+
+    ${({ type }) => type === 'gray' && css`
+    background: ${({theme}) => theme.text};
+    `};
+
+    ${({ type }) => type === 'yellow' && css`
+    background: ${({theme}) => theme.yellow};
+    `};
+
+    ${({ type }) => type === 'green' && css`
+    background: ${({theme}) => theme.success};
+    `};
+
+
+
+`;
 
 export const Logo = styled.p`
        

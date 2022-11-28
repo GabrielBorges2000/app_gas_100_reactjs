@@ -1,7 +1,7 @@
 export const theme = {
     header: '#5F9DF7',
 
-    background_primary: '#8D9EFF',
+    yellow: '#F49D1A',
     background_secondary: '#FFFFFF',
 
     text: '#7A7A80',
@@ -16,6 +16,7 @@ export const theme = {
     success: '#03B252',
 
     shape: '#E1E1E8',
-    orange: '#FD841F'
+    orange: '#FD841F',
+    gas: '#c2c2c1'
 
 } as const
