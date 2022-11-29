@@ -6,7 +6,7 @@ import React, {
     ReactNode
 } from 'react';
 
-type PropsBag = {
+export type PropsBag = {
     gasType: string;
     store: string;
     location: string;
@@ -17,8 +17,7 @@ type PropsBag = {
     timeMinute: number;
     timeSeconds: number;
     phoneDDD: number;
-    phonePrimary?: number;
-    phoneSecundary?: number;
+    phoneContact: number;
     amount: number;
     amountCentus: number;
     titleStore: string;
@@ -40,23 +39,22 @@ type BagProviderProps = {
 
 function initialValues() {
     return {
-        gasType: 'SupergasBras',
+        gasType: '',
         store: '',
-        location: 'Praça Miguel Ortega, 340',
-        name: 'Gabriel Borges Olivera',
-        pay: 'Crédito',
-        titleStore: 'Tonho Gas',
-        logoName: 'Tonho Gas',
+        location: '',
+        name: '',
+        pay: '',
+        titleStore: '',
+        logoName: '',
         navegation: '',
-        typeCard: 'green',
-        value: 79,
-        valueCentus: 99,
-        timeMinute: 15,
-        timeSeconds: 30,
-        phoneDDD: 11,
-        phonePrimary: 93435,
-        phoneSecundary: 4029,
-        amount: 1,
+        typeCard: '',
+        value: 0,
+        valueCentus: 0,
+        timeMinute: 0,
+        timeSeconds: 0,
+        phoneDDD: 0,
+        phoneContact: 0,
+        amount: 0,
         amountCentus: 0,
         note: 0,        
     }
