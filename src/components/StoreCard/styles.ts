@@ -1,7 +1,7 @@
 import styled, {css} from "styled-components";
 
 interface StoreCardProps {
-    typeCard: 'orange' | 'gray' | 'yellow' | 'green';
+    type: 'orange' | 'gray' | 'yellow' | 'green';
 }
 
 export const Container = styled.div`
@@ -76,19 +76,19 @@ export const LogoContainer = styled.p<StoreCardProps>`
     border-bottom-left-radius: 5px;
     color: ${({ theme }) => theme.white};
 
-    ${({ typeCard }) => typeCard === 'orange' && css`
+    ${({ type }) => type === 'orange' && css`
     background: ${({theme}) => theme.orange};
     `};
 
-    ${({ typeCard }) => typeCard === 'gray' && css`
+    ${({ type }) => type === 'gray' && css`
     background: ${({theme}) => theme.text};
     `};
 
-    ${({ typeCard }) => typeCard === 'yellow' && css`
+    ${({ type }) => type === 'yellow' && css`
     background: ${({theme}) => theme.yellow};
     `};
 
-    ${({ typeCard }) => typeCard === 'green' && css`
+    ${({ type }) => type === 'green' && css`
     background: ${({theme}) => theme.green};
     `};
 

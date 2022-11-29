@@ -26,14 +26,6 @@ export const Container = styled.div`
         font-size: 18px;
     }
 
-    img {
-        width: 150px;
-        margin: 0;
-
-        @media (max-width: 720px){
-            width: 80px;
-        }
-    }
 
     @media (max-width: 720px){
         width: 75%;
@@ -41,6 +33,18 @@ export const Container = styled.div`
         padding: 0 20px;
     }
 `;
+
+export const Image = styled.img`
+
+    width: 150px;
+    margin: 0;
+
+    @media (max-width: 720px){
+        width: 80px;
+    }
+
+`;
+
 export const GasContainer = styled.div`
     width: 50%;
 

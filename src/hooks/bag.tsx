@@ -51,7 +51,7 @@ function initialValues() {
         typeCard: '',
         value: 0,
         valueCentus: 0,
-        timeMinute: 15,
+        timeMinute: 0,
         timeSeconds: 30,
         phoneDDD: 0,
         phonePrimary: 0,

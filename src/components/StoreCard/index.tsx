@@ -1,38 +1,53 @@
-/* import { Star } from "phosphor-react"; */
-import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Star from '../../assets/star.svg'
 import { useBag } from '../../hooks/bag';
 
 import {
-    Amount, AmountContainer, AmountNumber, CardContainer, Cards, Container, Details, Icon, Logo, LogoContainer, Note, NoteContainer, NoteNumber, Time, TimeContainer, TimeNumber, Title
+    Amount, 
+    AmountContainer, 
+    AmountNumber, 
+    CardContainer, 
+    Cards, 
+    Container, 
+    Details, 
+    Icon, 
+    Logo, 
+    LogoContainer, 
+    Note, 
+    NoteContainer, 
+    NoteNumber, 
+    Time, 
+    TimeContainer, 
+    TimeNumber, 
+    Title
 } from "./styles";
 
-export function StoreCard() {
-    const { bag, handleUpdateBag } = useBag();
+type Props = {
+    titleStore: string,
+    note: number,
+    timeMinutes: number,
+    timeSeconds: number,
+    amount: number,
+    amountCentus: number,
+    logoName: string,
+    type: 'orange' | 'gray' | 'yellow' | 'green';
+}
 
-    const [amount, setAmount] = useState(0);
+export function StoreCard({amount, amountCentus, logoName,note,timeMinutes,timeSeconds,titleStore,type} : Props) {
+    const { bag, handleUpdateBag } = useBag();
 
     function handleAdd() {
         handleUpdateBag({
             ...bag,
-            titleStore: titleStore,
-            note: note,
-            timeMinutes: timeMinutes,
-            timeSeconds: timeSeconds,
-            amount: amount,
-            amountCentus,
-            logoName: logoName,
-            navegation:navegation,
-            typeCard: typeCard
+            amount: amount       
         });
     }
 
     return (
         <Container>
-            <NavLink to="/Cadastro"  onClick={handleAdd}>
+            <NavLink to="/Cadastro">
                 <Cards >
-                    <LogoContainer typeCard={typeCard}>
+                    <LogoContainer type={type}>
                         <Logo id='lblLogo'>{logoName}</Logo>
                     </LogoContainer>
 

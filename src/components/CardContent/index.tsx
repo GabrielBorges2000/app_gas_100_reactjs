@@ -9,7 +9,8 @@ import {
     Container,
     Number,
     GasContainer,
-    ButtonContainer
+    ButtonContainer,
+    Image
 
 } from './styles';
 
@@ -40,7 +41,7 @@ export function CardContent() {
                 />
                 <GasContainer>
                     <Number>{amount}</Number>
-                    <img src={Gas} />
+                    <Image src={Gas} />
                 </GasContainer>
                 <ButtonGas
                     onClick={() => setAmount(amount + 1)}

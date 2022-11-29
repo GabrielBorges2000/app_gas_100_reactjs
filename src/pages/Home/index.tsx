@@ -9,9 +9,9 @@ export function Home() {
     <Container>
       <Header />
       <StoreCard
-        typeCard="orange"
+        type="orange"
         logoName="SupergasBraz"
-        titleClient="Tonho Gás"
+        titleStore="Tonho Gás"
         note={4.8}
         timeMinutes={15}
         timeSeconds={30}
@@ -19,9 +19,10 @@ export function Home() {
         amountCentus={99}
       />
       <StoreCard
-        typeCard="gray"
+
+        type="gray"
         logoName="Multimarcas"
-        titleClient="Rafinha Gas"
+        titleStore="Rafinha Gas"
         note={4.8}
         timeMinutes={15}
         timeSeconds={30}
@@ -29,9 +30,9 @@ export function Home() {
         amountCentus={99}
       />
       <StoreCard
-        typeCard="yellow"
+        type="yellow"
         logoName="COPAGAZ"
-        titleClient="Zeca Gas"
+        titleStore="Zeca Gas"
         note={4.5}
         timeMinutes={15}
         timeSeconds={30}
@@ -39,9 +40,9 @@ export function Home() {
         amountCentus={99}
       />
       <StoreCard
-        typeCard="green"
+        type="green"
         logoName="ButanoGas"
-        titleClient="Gas Brasil"
+        titleStore="Gas Brasil"
         note={4.2}
         timeMinutes={20}
         timeSeconds={45}
