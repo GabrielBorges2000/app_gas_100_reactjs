@@ -35,6 +35,11 @@ export function Cadastro() {
       phoneDDD: 11,
       phonePrimary: 93435,
       phoneSecundary: 4029,
+      amount: 79,
+      amountCentus: 99,
+      gasType: 'SupergasBras',
+      logoName: 'Tonho Gas',
+      
 
     })
   }
@@ -66,11 +71,10 @@ export function Cadastro() {
           type="number"
         />
         <InputContact
-          placeholder="94444-4444"
+          placeholder="Seu Telefone"
           maxLength={10}
           minLength={1}
           type="number"
-
         />
       </InputContainer>
 

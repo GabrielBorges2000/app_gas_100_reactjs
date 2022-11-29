@@ -52,14 +52,14 @@ export const InputName = styled.input`
     justify-content: space-around;
 
     margin-bottom: 10px ;
-    width: 180px;
+    width: 200px;
 
     border: none;
     outline: 0;
     height: 40px;
     border-radius: 3px;
 
-    padding: 0px 15px ;
+
     margin-top: 30px;
 
     font-family: 'Roboto', sans-serif;
@@ -67,7 +67,8 @@ export const InputName = styled.input`
     background-color: ${({ theme }) => theme.background};
      
     @media (max-width: 720px){
-        margin-top: 0;
+        width: 70%; 
+
     }
 
 `;
