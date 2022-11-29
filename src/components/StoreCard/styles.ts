@@ -30,7 +30,7 @@ export const Container = styled.div`
     }
 
     a {
-    color: ${({theme})=> theme.text_dark};
+    color: ${({theme})=> theme.black};
     }
 
 
@@ -43,7 +43,7 @@ export const Cards = styled.div`
     width: 90%;
     height: 100%;
 
-    background: ${({ theme }) => theme.background_secondary};
+    background: ${({ theme }) => theme.white};
 
     border-radius: 5px;
     margin: 5%;
@@ -74,7 +74,7 @@ export const LogoContainer = styled.p<StoreCardProps>`
     
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    color: ${({ theme }) => theme.background_secondary};
+    color: ${({ theme }) => theme.white};
 
     ${({ type }) => type === 'orange' && css`
     background: ${({theme}) => theme.orange};
@@ -89,7 +89,7 @@ export const LogoContainer = styled.p<StoreCardProps>`
     `};
 
     ${({ type }) => type === 'green' && css`
-    background: ${({theme}) => theme.success};
+    background: ${({theme}) => theme.green};
     `};
 
 

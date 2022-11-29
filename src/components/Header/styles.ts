@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: ${({ theme }) => theme.background_secondary};
+  background: ${({ theme }) => theme.white};
   border-bottom: 1px solid ${({ theme }) => theme.text_detail};
 
 `;
@@ -14,7 +14,7 @@ export const Title = styled.p`
   font-weight: bold;
   margin-bottom: 10px ;
 
-  color: ${({ theme }) => theme.background_secondary};
+  color: ${({ theme }) => theme.white};
     
 `;
 export const Icons = styled.a` 
@@ -27,7 +27,7 @@ export const Icon = styled.button`
   display: flex;
   justify-content: space-between;
   background-color: transparent;
-  color: ${({ theme }) => theme.background_secondary};
+  color: ${({ theme }) => theme.white};
   font-weight: bold;
   border: none;
   margin-left: 5px;
@@ -49,7 +49,7 @@ export const Input = styled.input`
 
   font-family: 'Roboto', sans-serif;
   font-size: 12px;
-  background-color: ${({ theme }) => theme.shape};
+  background-color: ${({ theme }) => theme.background};
 `;
 
 export const HeaderContainer = styled.div`

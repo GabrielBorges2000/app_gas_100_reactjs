@@ -10,7 +10,7 @@ export const Container = styled.div`
 
     padding-bottom: 20px;
 
-    background: ${({ theme }) => theme.background_secondary};
+    background: ${({ theme }) => theme.white};
     
 `;
 
@@ -57,7 +57,7 @@ export const InputDDD = styled.input`
 
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    background-color: ${({ theme }) => theme.shape};
+    background-color: ${({ theme }) => theme.background};
 
     @media (max-width: 720px){
         padding: 0px 10px 0 10px ;
@@ -93,7 +93,7 @@ export const InputContact = styled.input`
 
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    background-color: ${({ theme }) => theme.shape};
+    background-color: ${({ theme }) => theme.background};
 
     
 
@@ -116,7 +116,7 @@ export const InputName = styled.input`
 
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    background-color: ${({ theme }) => theme.shape};
+    background-color: ${({ theme }) => theme.background};
      
     @media (max-width: 720px){
         margin-top: 0;
@@ -138,7 +138,7 @@ export const InputLocation = styled.input`
 
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    background-color: ${({ theme }) => theme.shape};
+    background-color: ${({ theme }) => theme.background};
      
     @media (max-width: 720px){
 
@@ -197,7 +197,7 @@ export const Button = styled.button`
     border: none;
     background: ${({ theme }) => theme.header};
     border-radius: 50px;
-    color: ${({ theme }) => theme.background_secondary};
+    color: ${({ theme }) => theme.white};
 
 `;
 
