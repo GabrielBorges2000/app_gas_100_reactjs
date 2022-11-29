@@ -1,35 +1,43 @@
 /* import { Star } from "phosphor-react"; */
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Star from '../../assets/star.svg'
+import { useBag } from '../../hooks/bag';
 
 import {
     Amount, AmountContainer, AmountNumber, CardContainer, Cards, Container, Details, Icon, Logo, LogoContainer, Note, NoteContainer, NoteNumber, Time, TimeContainer, TimeNumber, Title
 } from "./styles";
 
-type StoreCardProps = {
-    type: 'orange' | 'gray' | 'yellow' | 'green';
-    logoName?: string;
-    titleClient?: string;
-    note?: number;
-    timeMinutes?: number;
-    timeSeconds?: number;
-    amount?: number;
-    amountCentus?: number;
-    navegation?: boolean;
-}
+export function StoreCard() {
+    const { bag, handleUpdateBag } = useBag();
 
-export function StoreCard({ titleClient, note, timeMinutes, timeSeconds, amount, amountCentus, logoName, navegation, type}: StoreCardProps) {
+    const [amount, setAmount] = useState(0);
+
+    function handleAdd() {
+        handleUpdateBag({
+            ...bag,
+            titleStore: titleStore,
+            note: note,
+            timeMinutes: timeMinutes,
+            timeSeconds: timeSeconds,
+            amount: amount,
+            amountCentus,
+            logoName: logoName,
+            navegation:navegation,
+            typeCard: typeCard
+        });
+    }
 
     return (
         <Container>
-            <NavLink to="/Cadastro" >
+            <NavLink to="/Cadastro"  onClick={handleAdd}>
                 <Cards >
-                    <LogoContainer type={type}>
+                    <LogoContainer typeCard={typeCard}>
                         <Logo id='lblLogo'>{logoName}</Logo>
                     </LogoContainer>
 
                     <CardContainer>
-                        <Title id="lblTitle">{titleClient}</Title>
+                        <Title id="lblTitle">{titleStore}</Title>
                         <Details>
                             <NoteContainer>
                                 <Note>Nota</Note>

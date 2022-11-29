@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import Gas from '../../assets/Gas_Cozinha.png'
+import { useBag } from '../../hooks/bag';
 import { ButtonGas } from '../ButtonGas';
 import { Title } from '../Title';
 
@@ -13,7 +14,16 @@ import {
 } from './styles';
 
 export function CardContent() {
+    const { bag, handleUpdateBag } = useBag();
+
     const [amount, setAmount] = useState(1);
+
+    function handleAdd() {
+        handleUpdateBag({
+            ...bag,
+            amount: amount
+        });
+    }
 
     return (
         <Container>
@@ -37,6 +47,8 @@ export function CardContent() {
                     typeButton={true}
                 />
             </ButtonContainer>
+
+            <button onClick={handleAdd}>add</button>
         </Container>
     )
 }

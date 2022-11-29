@@ -1,5 +1,6 @@
 import { Storefront } from 'phosphor-react';
 import Star from '../../assets/star.svg'
+import { useBag } from '../../hooks/bag';
 
 import {
     AmountNumber,
@@ -27,6 +28,7 @@ type Props = {
 }
 
 export function CardHeader({ amount, amountCentus, note, timeMinutes, timeSeconds, titleClient, logoName }: Props) {
+
     return (
         <Container>
             <Storefront size={40} />

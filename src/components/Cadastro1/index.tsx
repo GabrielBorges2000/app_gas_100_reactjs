@@ -9,10 +9,25 @@ import {
   Container, Image, ButtonProps, ImageContainer, InputContact, InputContainer, InputDDD, InputName, Title, Card, ButtonContainer, TitleButton, InputLocation
 } from './styles';
 import { NavLink } from 'react-router-dom';
+import { useBag } from '../../hooks/bag';
 
 
 
 export function Cadastro1() {
+  const { bag, handleUpdateBag } = useBag();
+
+  function handleNext() {
+    handleUpdateBag({
+      ...bag,
+      name: '',
+      location: '',
+      phoneDDD: 11,
+      phonePrimary: 93435,
+      phoneSecundary: 4029,
+
+    })
+  }
+
   return (
     <Container>
       <ImageContainer>
@@ -75,7 +90,7 @@ export function Cadastro1() {
 
         <ButtonContainer>
           <NavLink to="/Pagamento">
-            <Button type="submit">
+            <Button type="submit" onClick={handleNext}>
               <CaretRight size={32} />
             </Button>
           </NavLink>

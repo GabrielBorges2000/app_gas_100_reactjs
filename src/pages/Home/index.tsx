@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { Header } from "../../components/Header";
 import { StoreCard } from "../../components/StoreCard";
+import { useBag } from "../../hooks/bag";
 import { Container, } from "./styled";
 
 export function Home() {
@@ -8,7 +9,7 @@ export function Home() {
     <Container>
       <Header />
       <StoreCard
-        type="orange"
+        typeCard="orange"
         logoName="SupergasBraz"
         titleClient="Tonho Gás"
         note={4.8}
@@ -18,7 +19,7 @@ export function Home() {
         amountCentus={99}
       />
       <StoreCard
-        type="gray"
+        typeCard="gray"
         logoName="Multimarcas"
         titleClient="Rafinha Gas"
         note={4.8}
@@ -28,7 +29,7 @@ export function Home() {
         amountCentus={99}
       />
       <StoreCard
-        type="yellow"
+        typeCard="yellow"
         logoName="COPAGAZ"
         titleClient="Zeca Gas"
         note={4.5}
@@ -38,7 +39,7 @@ export function Home() {
         amountCentus={99}
       />
       <StoreCard
-        type="green"
+        typeCard="green"
         logoName="ButanoGas"
         titleClient="Gas Brasil"
         note={4.2}
