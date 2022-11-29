@@ -44,61 +44,9 @@ export const Image = styled.img`
 
 
 `;
-export const InputDDD = styled.input`
-    display: flex;
-    justify-content: center;
-
-    border: none;
-    outline:0;
-    width: 50px;
-    height: 40px;
-    border-radius: 3px;
-    padding: 0px 10px ;
-
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    background-color: ${({ theme }) => theme.background};
-
-    @media (max-width: 720px){
-        padding: 0px 10px 0 10px ;
-            width: 50px;
-
-        @media (max-width: 520px){
-            padding: 0px 10px 0 10px ;
-            width: 50px; 
-                
-                @media (max-width: 420px){
-                    padding: 0px 10px ;
-                    width: 50px;    
-                    
-                    @media (max-width: 420px){
-                        padding: 0px 10px ;
-                            
-                    }
-                }
-        }
-    }
-`;
-
-export const InputContact = styled.input`
-    display: flex;
-    justify-content: center;
-
-    border: none;
-    outline:0;
-    width: 100px;
-    height: 40px;
-    border-radius: 3px;
-    padding: 0px 15px ;
-
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    background-color: ${({ theme }) => theme.background};
-
-    
 
 
-`;
+
 export const InputName = styled.input`
     display: flex;
     justify-content: space-around;
@@ -123,64 +71,7 @@ export const InputName = styled.input`
     }
 
 `;
-export const InputLocation = styled.input`
-    display: flex;
-    justify-content: space-around;
 
-    margin-bottom: 10px ;
-    width: 180px;
-
-    border: none;
-    outline: 0;
-    height: 40px;
-    border-radius: 3px;
-    padding: 0px 15px ;
-
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    background-color: ${({ theme }) => theme.background};
-     
-    @media (max-width: 720px){
-
-    }
-
-`;
-
-export const InputContainer = styled.form`
-    display: flex;
-    justify-content: space-around;
-
-    width: 230px;
-    
-
-        
-    @media (max-width: 720px){
-        width: 230px;
-        margin-top: 5px;
-
-        @media (max-width: 520px){
-            width: 45%;
-
-            @media (max-width: 455px){
-                width: 50%;
-
-                @media (max-width: 455px){
-                width: 58%;
-
-                    @media (max-width: 780px){
-                        width: 60%;
-
-                    }
-
-                }
-
-            }
-
-        }
-
-    }
-
-`;
 
 
 export const Title = styled.p`

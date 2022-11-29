@@ -10,7 +10,9 @@ import {
     Number,
     GasContainer,
     ButtonContainer,
-    Image
+    Image,
+    Button,
+    CardContainer
 
 } from './styles';
 
@@ -26,30 +28,42 @@ export function CardContent() {
         });
     }
 
+    const [stap, setStap] = useState(0);
+
+    function handleNext(isNext: boolean = true) {
+        setStap(isNext ? stap + 1 : stap - 1);
+    }
+    
     return (
         <Container>
-            <Title
-                titleName='SupergasBras'
-                titleType='Botijão de 13Kg'
-                amount={79}
-                amountCentus={99}
-            />
-            <ButtonContainer>
-                <ButtonGas
-                    onClick={() => (amount - 1) > 0 && setAmount(amount - 1)}
-                    typeButton={false}
+            <CardContainer>
+                <Title
+                    titleName='SupergasBras'
+                    titleType='Botijão de 13Kg'
+                    amount={79}
+                    amountCentus={99}
                 />
-                <GasContainer>
-                    <Number>{amount}</Number>
-                    <Image src={Gas} />
-                </GasContainer>
-                <ButtonGas
-                    onClick={() => setAmount(amount + 1)}
-                    typeButton={true}
-                />
-            </ButtonContainer>
+                <ButtonContainer>
+                    <ButtonGas
+                        onClick={() => (amount - 1) > 0 && setAmount(amount - 1)}
+                        typeButton={false}
+                    />
+                    <GasContainer>
+                        <Number>{amount}</Number>
+                        <Image src={Gas} />
+                    </GasContainer>
+                    <ButtonGas
+                        onClick={() => setAmount(amount + 1)}
+                        typeButton={true}
+                    />
+                </ButtonContainer>
+            </CardContainer>
 
-            <button onClick={handleAdd}>add</button>
+            <Button
+                onClick={handleAdd}
+            >
+                Adicionar item
+            </Button>
         </Container>
     )
 }

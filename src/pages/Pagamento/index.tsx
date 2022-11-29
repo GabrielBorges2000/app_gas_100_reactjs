@@ -26,6 +26,7 @@ export function Pagamento() {
                 />
                 : (stap === 1 ?
                     <HeaderPay
+                        backpay={true}
                         option={true}
                         title="Metodo de Pagamento"
                     />

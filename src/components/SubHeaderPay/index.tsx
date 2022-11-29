@@ -5,14 +5,13 @@ import {
 } from "./styles";
 
 type Props = {
-    quantidade?: number;
     title?: string;
     amount?: number;
     amountCentus?: number;
 
 }
 
-export function SubHeaderPay({ amount, amountCentus, quantidade, title }: Props) {
+export function SubHeaderPay({ amount, amountCentus, title }: Props) {
     const { bag } = useBag();
 
     return (

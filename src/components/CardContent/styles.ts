@@ -2,9 +2,10 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 75%;
-    height: 250px;
+    height: 290px;
 
-    display: flex;
+    display: flex;    
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 
@@ -29,9 +30,10 @@ export const Container = styled.div`
 
     @media (max-width: 720px){
         width: 75%;
-        height: 180px;
+        height: auto;
         padding: 0 20px;
     }
+
 `;
 
 export const Image = styled.img`
@@ -90,6 +92,34 @@ export const ButtonContainer = styled.div`
     display: flex;
     flex: row;
     align-items: center;
+    justify-content: center;
+
+`;
+
+export const CardContainer = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 30px;
+`;
+
+export const Button = styled.button`
+    width: 50%;
+    height: 40px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: ${({ theme }) => theme.header};
+    color: ${({ theme }) => theme.white};
+
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+
 `;
 
 

@@ -7,13 +7,12 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-padding: 0 40px;    
+    padding: 0 40px;    
 
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 
-    background: ${({theme}) => theme.white};
+    background: ${({ theme }) => theme.white};
 
     * {
         font-family: 'Roboto', sans-serif;
@@ -25,7 +24,6 @@ padding: 0 40px;
     }
 
     @media(max-width: 720px) {
-        width: 75%;
         padding: 0 20px;
     }
 
@@ -70,7 +68,7 @@ export const CardDetail = styled.div`
 
 `;
 
-export const DetailHeader =styled.div`
+export const DetailHeader = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -78,7 +76,7 @@ export const DetailHeader =styled.div`
 
 `;
 
-export const DetailContent =styled.div`
+export const DetailContent = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -86,19 +84,19 @@ export const DetailContent =styled.div`
 
 `;
 
-export const LogoContainer =styled.div`
+export const LogoContainer = styled.div`
     height: 30px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    background: ${({theme}) => theme.orange};
+    background: ${({ theme }) => theme.orange};
 
     border-radius: 2px;
 `;
 
-export const Logo =styled.p`
+export const Logo = styled.p`
     width: 100%;
 
     font-size: 14px;

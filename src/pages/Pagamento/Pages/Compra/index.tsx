@@ -14,7 +14,6 @@ export function Compra() {
         <Container>
             <SubHeaderPay
                 title='Supergasbras - Botijão de 13kg'
-                quantidade={1}
                 amount={79}
                 amountCentus={99}
             />

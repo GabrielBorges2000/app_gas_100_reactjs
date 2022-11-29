@@ -99,52 +99,8 @@ export const InputContact = styled.input`
 
 
 `;
-export const InputName = styled.input`
-    display: flex;
-    justify-content: space-around;
 
-    margin-bottom: 10px ;
-    width: 180px;
 
-    border: none;
-    outline: 0;
-    height: 40px;
-    border-radius: 3px;
-
-    padding: 0px 15px ;
-    margin-top: 30px;
-
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    background-color: ${({ theme }) => theme.background};
-     
-    @media (max-width: 720px){
-        margin-top: 0;
-    }
-
-`;
-export const InputLocation = styled.input`
-    display: flex;
-    justify-content: space-around;
-
-    margin-bottom: 10px ;
-    width: 180px;
-
-    border: none;
-    outline: 0;
-    height: 40px;
-    border-radius: 3px;
-    padding: 0px 15px ;
-
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
-    background-color: ${({ theme }) => theme.background};
-     
-    @media (max-width: 720px){
-
-    }
-
-`;
 
 export const InputContainer = styled.form`
     display: flex;
@@ -152,8 +108,7 @@ export const InputContainer = styled.form`
 
     width: 230px;
     
-
-        
+     
     @media (max-width: 720px){
         width: 230px;
         margin-top: 5px;

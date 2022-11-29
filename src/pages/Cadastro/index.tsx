@@ -6,8 +6,19 @@ import { InputHTMLAttributes } from 'react';
 
 import {
   Button,
-  Container, Image, ButtonProps, ImageContainer, InputContact, InputContainer, InputDDD, InputName, Title, Card, ButtonContainer, TitleButton, InputLocation
+  Container, 
+  Image, 
+  ButtonProps, 
+  ImageContainer, 
+  InputContact, 
+  InputContainer, 
+  InputDDD, 
+  Title, 
+  Card, 
+  ButtonContainer, 
+  TitleButton
 } from './styles';
+
 import { NavLink } from 'react-router-dom';
 import { useBag } from '../../hooks/bag';
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { CardsPayment } from '../../../../components/CardsPayment';
 import { SubHeaderPay } from '../../../../components/SubHeaderPay';
 
@@ -11,7 +10,6 @@ export function Pagamento1() {
         <Container>
             <SubHeaderPay
                 title='Supergasbras - Botijão de 13kg'
-                quantidade={1}
                 amount={79}
                 amountCentus={99}
             />
