@@ -19,12 +19,14 @@ export type PropsBag = {
     phoneDDD: number;
     phoneContact: number;
     amount: number;
-    amountCentus: number;
+    valor: number;
     titleStore: string;
     note: number;
     logoName: string;
     navegation: string;
-    typeCard: string;
+    typeCard: 'orange' | 'gray' | 'yellow' | 'green';
+    titleName: string;
+    titlePay: string;
 }
 
 type BagContextData = {
@@ -47,16 +49,18 @@ function initialValues() {
         titleStore: '',
         logoName: '',
         navegation: '',
-        typeCard: '',
+        typeCard: 'orange' as 'orange' | 'gray' | 'yellow' | 'green',
+        titleName: '',
+        titlePay: '',
         value: 0,
-        valueCentus: 0,
-        timeMinute: 0,
-        timeSeconds: 0,
+        valueCentus: 99,
+        timeMinute: 15,
+        timeSeconds: 30,
         phoneDDD: 0,
         phoneContact: 0,
         amount: 0,
-        amountCentus: 0,
-        note: 0,        
+        note: 0,
+        valor: 79,
     }
 }
 

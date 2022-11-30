@@ -50,5 +50,13 @@ export const PropsButton = styled.p`
 
 `;
 
+export const FinalButton = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+`;
+
 
 

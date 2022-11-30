@@ -32,16 +32,9 @@ export function Cadastro() {
   function handleNext() {
     handleUpdateBag({
       ...bag,
-      name: '',
-      location: '',
       phoneDDD: Number(phoneDDD),
       // phoneContact: phoneContact,
       phoneContact: Number(phoneContact),
-      amount: 0,
-      amountCentus: 0,
-      gasType: '0',
-      logoName: '0',
-
     })
   }
 
@@ -53,14 +46,13 @@ export function Cadastro() {
 
       <Card>
         <StoreCard
-          type='orange'
-          logoName="SupergasBraz"
-          titleStore="Tonho Gás"
+          typeCard={bag.typeCard}
+          logoName={bag.logoName}
+          titleStore={bag.titleStore}
           note={4.8}
           timeMinutes={15}
           timeSeconds={30}
-          amount={79}
-          amountCentus={99}
+          valor={79}
         />
       </Card>
 

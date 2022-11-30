@@ -28,24 +28,18 @@ export function CardContent() {
         });
     }
 
-    const [stap, setStap] = useState(0);
-
-    function handleNext(isNext: boolean = true) {
-        setStap(isNext ? stap + 1 : stap - 1);
-    }
-    
     return (
         <Container>
             <CardContainer>
                 <Title
-                    titleName='SupergasBras'
+                    titleName={bag.logoName}
                     titleType='Botijão de 13Kg'
                     amount={79}
                     amountCentus={99}
                 />
                 <ButtonContainer>
                     <ButtonGas
-                        onClick={() => (amount - 1) > 0 && setAmount(amount - 1)}
+                        onClick={() => (amount - 1 ) > 0 && setAmount(amount - 1)}
                         typeButton={false}
                     />
                     <GasContainer>

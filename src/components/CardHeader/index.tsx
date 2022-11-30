@@ -20,35 +20,35 @@ import {
 type Props = {
     titleClient?: string;
     note?: number;
-    timeMinutes?: number;
-    timeSeconds?: number;
     amount?: number;
     amountCentus?: number;
     logoName?: string;
+    typeCard: 'orange' | 'gray' | 'yellow' | 'green';
 }
 
-export function CardHeader({ amount, amountCentus, note, timeMinutes, timeSeconds, titleClient, logoName }: Props) {
+export function CardHeader({ note, titleClient, logoName, typeCard }: Props) {
+    const { bag } = useBag();
 
     return (
         <Container>
             <Storefront size={40} />
-            
+
             <CardDetail>
 
-            <DetailHeader>
-                <Title >{titleClient}</Title>
-                <LogoContainer>
-                    <Logo >{logoName}</Logo>
-                </LogoContainer>
-            </DetailHeader>
+                <DetailHeader>
+                    <Title >{titleClient}</Title>
+                    <LogoContainer type={typeCard}>
+                        <Logo >{logoName}</Logo>
+                    </LogoContainer>
+                </DetailHeader>
 
-            <DetailContent>
-                <NoteNumber id="lblNota" >
-                    <b>{note}</b> <Icon src={Star} />
-                </NoteNumber>
-                <TimeNumber id="lblTime"><b>{timeMinutes}-{timeSeconds}</b> min</TimeNumber>
-                <AmountNumber id="lblAmount">R$<b>{amount}</b>.{amountCentus}</AmountNumber>
-            </DetailContent>
+                <DetailContent>
+                    <NoteNumber id="lblNota" >
+                        <b>{note}</b> <Icon src={Star} />
+                    </NoteNumber>
+                    <TimeNumber id="lblTime"><b>{bag.timeMinute}-{bag.timeSeconds}</b> min</TimeNumber>
+                    <AmountNumber id="lblAmount">R$<b>{bag.valor}</b>,{bag.valueCentus}</AmountNumber>
+                </DetailContent>
 
             </CardDetail>
 

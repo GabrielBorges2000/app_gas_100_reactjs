@@ -51,7 +51,6 @@ export const InputName = styled.input`
     display: flex;
     justify-content: space-around;
 
-    margin-bottom: 10px ;
     width: 200px;
 
     border: none;
@@ -59,8 +58,10 @@ export const InputName = styled.input`
     height: 40px;
     border-radius: 3px;
 
-
+    margin-bottom: 10px ;
     margin-top: 30px;
+
+    padding-left: 2px;
 
     font-family: 'Roboto', sans-serif;
     font-size: 18px;

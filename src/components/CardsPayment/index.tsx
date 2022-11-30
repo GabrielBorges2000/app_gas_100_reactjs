@@ -12,32 +12,42 @@ import {
     TitleName,
     InfoContainer,
 } from './styles';
+import { useBag } from '../../hooks/bag';
 
 type Props = {
-    titleName?: string;
-    title?: string;
+    titlePay?: string;
+    typePay?: string;
     img?: boolean;
     card?: boolean;
     diner?: boolean;
 
-
 }
 
-export function CardsPayment({ title, titleName, img, card, diner }: Props) {
+export function CardsPayment({ typePay, titlePay, img, card, diner }: Props) {
+    const { bag, handleUpdateBag } = useBag();
+
+
+    // function handleAdd() {
+    //     handleUpdateBag({
+    //         ...bag,
+    //         titlePay: titlePay,
+    //     })
+    // }
+
     return (
         <Container>
             <InfoContainer>
-                <TitleName>{titleName}</TitleName>
+                <TitleName>{titlePay}</TitleName>
                 <ContentContainer>
                     {img && <ImageContainer />}
                     {card && <CreditCard size={32} color="#5F9DF7" />}
                     {diner && <Coins size={32} color="#5F9DF7" />}
 
-                    <Title>{title}</Title>
+                    <Title>{typePay}</Title>
                 </ContentContainer>
             </InfoContainer>
 
-            <ButtonCheck>
+            <ButtonCheck /* onClick={handleAdd} */>
                 <ControlledCheckbox />
             </ButtonCheck>
         </Container>

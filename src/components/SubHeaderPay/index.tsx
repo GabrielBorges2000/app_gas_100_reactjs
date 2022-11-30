@@ -17,8 +17,8 @@ export function SubHeaderPay({ amount, amountCentus, title }: Props) {
     return (
         <Container>
             <TitleNumber>{bag.amount}</TitleNumber>
-            <Title>{title}</Title>
-            <TitleAmount>R$<b>{amount},{amountCentus}</b></TitleAmount>
+            <Title>{bag.logoName}{title}</Title>
+            <TitleAmount>R$<b>{bag.valor}</b>,{bag.valueCentus}</TitleAmount>
         </Container>
     )
 }

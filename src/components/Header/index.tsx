@@ -1,4 +1,6 @@
 import { ArrowsDownUp, MapPin, Question } from "phosphor-react";
+import { useState } from "react";
+import { useBag } from "../../hooks/bag";
 import {
   Container,
   HeaderContainer,
@@ -16,6 +18,16 @@ import {
 
 
 export function Header() {
+  const { bag, handleUpdateBag } = useBag();
+  const [location, setLocation] = useState('');
+
+  function handleNext() {
+    handleUpdateBag({
+      ...bag,
+      location: location,
+    })
+  }
+
   return (
     <Container>
       <HeaderContainer>
@@ -33,9 +45,13 @@ export function Header() {
       <HeaderContent>
         <Pesquisa>
           <TitleSecond>Botijões de 13Kg em:</TitleSecond>
-          <Input placeholder="Digite algo..." />
+          <Input
+            value={location}
+            onChange={e => setLocation(e.target.value)}
+            placeholder="Digite algo..."
+          />
         </Pesquisa>
-        <MapContainer>
+        <MapContainer onClick={handleNext}>
           <Icon1>
             <MapPin size={32} id="lblMap" />
           </Icon1>

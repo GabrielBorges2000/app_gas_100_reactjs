@@ -1,5 +1,5 @@
 import {
-    Container, PropsButton, TitleButton, Button, ButtonContainer, ContainerPage
+    Container, PropsButton, TitleButton, Button, ButtonContainer, ContainerPage, FinalButton
 } from "./styles";
 import { CaretLeft, CaretRight } from "phosphor-react";
 
@@ -9,8 +9,18 @@ import { Compra } from "./Pages/Compra";
 import { Confirmacao } from "./Pages/Confirmacao";
 import { HeaderPay } from "../../components/HeaderPay";
 import { Pagamento1 } from "./Pages/Pagamento1";
+import { useBag } from "../../hooks/bag";
+import { NavLink } from "react-router-dom";
 
 export function Pagamento() {
+    const { handleClearBag } = useBag();
+
+    function handleClear() {
+        handleClearBag();
+    }
+
+
+
     const [stap, setStap] = useState(0);
 
     function handleNext(isNext: boolean = true) {
@@ -70,22 +80,19 @@ export function Pagamento() {
                     </ContainerPage>
                     : <ContainerPage>
                         <Confirmacao />
-                        <PropsButton>
-                            <ButtonContainer>
-                                <Button type="submit" onClick={() => handleNext(false)}>
-                                    <CaretLeft size={32} />
+                        <NavLink to="/">
+                            <FinalButton>
+                                <PropsButton>
+                                    <ButtonContainer>
+                                        <Button type="submit" onClick={handleClearBag} >
+                                            <CaretRight size={32} />
+                                        </Button>
+                                        <TitleButton>Next</TitleButton>
+                                    </ButtonContainer>
+                                </PropsButton>
+                            </FinalButton>
+                        </NavLink>
 
-                                </Button>
-                                <TitleButton>Back</TitleButton>
-                            </ButtonContainer>
-
-                            <ButtonContainer>
-                                <Button type="submit" onClick={() => handleNext(true)}>
-                                    <CaretRight size={32} />
-                                </Button>
-                                <TitleButton>Next</TitleButton>
-                            </ButtonContainer>
-                        </PropsButton>
                     </ContainerPage>
                 )
             }

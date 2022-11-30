@@ -1,4 +1,8 @@
-import styled from 'styled-components';
+import styled, { css } from "styled-components";
+
+interface StoreCardProps {
+    type: 'orange' | 'gray' | 'yellow' | 'green';
+}
 
 export const Container = styled.div`
     width: 75%;
@@ -84,14 +88,28 @@ export const DetailContent = styled.div`
 
 `;
 
-export const LogoContainer = styled.div`
+export const LogoContainer = styled.div<StoreCardProps>`
     height: 30px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
+    ${({ type }) => type === 'orange' && css`
     background: ${({ theme }) => theme.orange};
+    `};
+
+    ${({ type }) => type === 'gray' && css`
+    background: ${({ theme }) => theme.text};
+    `};
+
+    ${({ type }) => type === 'yellow' && css`
+    background: ${({ theme }) => theme.yellow};
+    `};
+
+    ${({ type }) => type === 'green' && css`
+    background: ${({ theme }) => theme.green};
+    `};
 
     border-radius: 2px;
 `;

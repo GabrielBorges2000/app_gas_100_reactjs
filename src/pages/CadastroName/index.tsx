@@ -1,5 +1,5 @@
 import { CaretLeft, CaretRight } from 'phosphor-react';
-import React from 'react';
+import React, { useState } from 'react';
 import Gas from '../../assets/Gas.png'
 import { InputHTMLAttributes } from 'react';
 
@@ -15,16 +15,12 @@ import { StoreCard } from '../../components/StoreCard';
 
 export function CadastroName() {
     const { bag, handleUpdateBag } = useBag();
+    const [name, setName] = useState('');
 
     function handleNext() {
         handleUpdateBag({
             ...bag,
-            name: 'Gabriel Borges Olivera',
-            location: 'Praça Miguel',
-            phoneDDD: 11,
-            phonePrimary: 93435,
-            phoneSecundary: 4029,
-
+            name: name,
         })
     }
 
@@ -36,18 +32,19 @@ export function CadastroName() {
 
             <Card>
                 <StoreCard
-                    type='orange'
-                    logoName="SupergasBraz"
-                    titleStore="Tonho Gás"
+                    typeCard={bag.typeCard}
+                    logoName={bag.logoName}
+                    titleStore={bag.titleStore}
                     note={4.8}
                     timeMinutes={15}
                     timeSeconds={30}
-                    amount={79}
-                    amountCentus={99}
-                />
+                    valor={79}
+                    />
             </Card>
 
             <InputName
+                value={name}
+                onChange={e => setName(e.target.value)}
                 placeholder="Nome"
                 maxLength={30}
                 minLength={1}

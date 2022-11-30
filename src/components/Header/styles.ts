@@ -84,10 +84,13 @@ export const TitleSecond = styled.p`
   margin-bottom: 10px;
 `;
 
-export const MapContainer = styled.div`
+export const MapContainer = styled.button`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  border: 0;
+  background: transparent;
 
 `;
 

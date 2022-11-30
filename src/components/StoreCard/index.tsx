@@ -3,22 +3,22 @@ import Star from '../../assets/star.svg'
 import { useBag } from '../../hooks/bag';
 
 import {
-    Amount, 
-    AmountContainer, 
-    AmountNumber, 
-    CardContainer, 
-    Cards, 
-    Container, 
-    Details, 
-    Icon, 
-    Logo, 
-    LogoContainer, 
-    Note, 
-    NoteContainer, 
-    NoteNumber, 
-    Time, 
-    TimeContainer, 
-    TimeNumber, 
+    Amount,
+    AmountContainer,
+    AmountNumber,
+    CardContainer,
+    Cards,
+    Container,
+    Details,
+    Icon,
+    Logo,
+    LogoContainer,
+    Note,
+    NoteContainer,
+    NoteNumber,
+    Time,
+    TimeContainer,
+    TimeNumber,
     Title
 } from "./styles";
 
@@ -27,27 +27,43 @@ type Props = {
     note: number,
     timeMinutes: number,
     timeSeconds: number,
-    amount: number,
-    amountCentus: number,
+    valor: number,
     logoName: string,
-    type: 'orange' | 'gray' | 'yellow' | 'green';
+    typeCard: 'orange' | 'gray' | 'yellow' | 'green';
 }
 
-export function StoreCard({amount, amountCentus, logoName,note,timeMinutes,timeSeconds,titleStore,type} : Props) {
+export function StoreCard({ valor, logoName, note, timeMinutes, timeSeconds, titleStore, typeCard }: Props) {
     const { bag, handleUpdateBag } = useBag();
 
     function handleAdd() {
+        console.log({
+            ...bag,
+            typeCard: typeCard,
+            logoName: logoName,
+            titleStore: titleStore,
+            timeMinute: timeMinutes,
+            timeSeconds: timeSeconds,
+            valor: valor,
+            note: note,
+        });
+
         handleUpdateBag({
             ...bag,
-            amount: amount       
+            typeCard: typeCard,
+            logoName: logoName,
+            titleStore: titleStore,
+            timeMinute: timeMinutes,
+            timeSeconds: timeSeconds,
+            valor: valor,
+            note: note,
         });
     }
 
     return (
         <Container>
-            <NavLink to="/Cadastro">
+            <NavLink to="/Cadastro" onClick={handleAdd}>
                 <Cards >
-                    <LogoContainer type={type}>
+                    <LogoContainer type={typeCard}>
                         <Logo id='lblLogo'>{logoName}</Logo>
                     </LogoContainer>
 
@@ -66,7 +82,7 @@ export function StoreCard({amount, amountCentus, logoName,note,timeMinutes,timeS
                             </TimeContainer>
                             <AmountContainer>
                                 <Amount>Preço</Amount>
-                                <AmountNumber id="lblAmount">R$<b>{amount}</b>.{amountCentus}</AmountNumber>
+                                <AmountNumber id="lblAmount">R$<b>{valor}</b>,99</AmountNumber>
                             </AmountContainer>
                         </Details>
                     </CardContainer>

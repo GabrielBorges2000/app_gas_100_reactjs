@@ -3,51 +3,48 @@ import { Header } from "../../components/Header";
 import { StoreCard } from "../../components/StoreCard";
 import { useBag } from "../../hooks/bag";
 import { Container, } from "./styled";
+import {useState} from 'react';
 
 export function Home() {
   return (
     <Container>
       <Header />
       <StoreCard
-        type="orange"
+        typeCard="orange"
         logoName="SupergasBraz"
         titleStore="Tonho Gás"
         note={4.8}
         timeMinutes={15}
         timeSeconds={30}
-        amount={79}
-        amountCentus={99}
+        valor={79}
       />
       <StoreCard
 
-        type="gray"
+        typeCard="gray"
         logoName="Multimarcas"
         titleStore="Rafinha Gas"
         note={4.8}
         timeMinutes={15}
         timeSeconds={30}
-        amount={79}
-        amountCentus={99}
+        valor={79}
       />
       <StoreCard
-        type="yellow"
+        typeCard="yellow"
         logoName="COPAGAZ"
         titleStore="Zeca Gas"
         note={4.5}
         timeMinutes={15}
         timeSeconds={30}
-        amount={75}
-        amountCentus={99}
+        valor={79}
       />
       <StoreCard
-        type="green"
+        typeCard="green"
         logoName="ButanoGas"
         titleStore="Gas Brasil"
         note={4.2}
         timeMinutes={20}
         timeSeconds={45}
-        amount={69}
-        amountCentus={99}
+        valor={79}
       />
     </Container>
   )

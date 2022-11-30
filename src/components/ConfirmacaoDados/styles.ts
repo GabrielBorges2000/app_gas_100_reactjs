@@ -70,3 +70,6 @@ export const Value = styled.p`
 export const Time = styled.p`
 
 `;
+export const Image = styled.img`
+
+`;

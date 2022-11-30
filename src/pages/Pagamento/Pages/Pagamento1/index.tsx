@@ -9,24 +9,24 @@ export function Pagamento1() {
     return (
         <Container>
             <SubHeaderPay
-                title='Supergasbras - Botijão de 13kg'
+                title=' - Botijão de 13kg'
                 amount={79}
                 amountCentus={99}
             />
             <CardsPayment
-                titleName='Crédito'
+                titlePay='Crédito'
                 img={true}
 
             />
             <CardsPayment
-                titleName='Débito'
+                titlePay='Débito'
                 card={true}
-                title='Pague na Entrega'
+                typePay='Pague na Entrega'
             />
             <CardsPayment
-                titleName='Dinheiro'
+                titlePay='Dinheiro'
                 diner={true}
-                title='Pague na Entrega'
+                typePay='Pague na Entrega'
             />
 
         </Container>
