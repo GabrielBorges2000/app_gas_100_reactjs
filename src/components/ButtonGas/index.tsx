@@ -11,7 +11,7 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export function ButtonGas({ typeButton, ...rest }: Props) {
     return (
-        <Container {...rest}>
+        <Container {...rest} >
             {typeButton === true ? <Plus size={28} /> : <Minus size={28} />}
         </Container>
     )

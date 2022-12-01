@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import Star from '../../assets/star.svg'
+import Star from './assets/star.svg'
 import { useBag } from '../../hooks/bag';
 
 import {
