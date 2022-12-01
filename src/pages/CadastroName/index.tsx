@@ -35,10 +35,10 @@ export function CadastroName() {
                     typeCard={bag.typeCard}
                     logoName={bag.logoName}
                     titleStore={bag.titleStore}
-                    note={4.8}
-                    timeMinutes={15}
-                    timeSeconds={30}
-                    valor={79}
+                    note={bag.note}
+                    timeMinutes={bag.timeMinute}
+                    timeSeconds={bag.timeSeconds}
+                    valor={bag.valor}
                     />
             </Card>
 

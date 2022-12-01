@@ -56,7 +56,7 @@ export function CardContent() {
             <Button
                 onClick={handleAdd}
             >
-                Adicionar item
+                Adicionar item ao carrinho
             </Button>
         </Container>
     )

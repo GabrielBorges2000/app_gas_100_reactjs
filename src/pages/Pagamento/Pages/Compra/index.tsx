@@ -5,6 +5,7 @@ import { SubHeaderPay } from '../../../../components/SubHeaderPay';
 import { useBag } from '../../../../hooks/bag';
 
 import {
+
     Container,
 } from './styles';
 
@@ -22,11 +23,12 @@ export function Compra() {
             <CardHeader
                 typeCard={bag.typeCard}
                 titleClient='Tonho Gas'
-                amount={79}
+                
                 amountCentus={99}
                 note={4.8}
                 logoName={bag.logoName}
             />
+            
             <CardContent />
         </Container>
     )

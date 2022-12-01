@@ -2,6 +2,7 @@ import { CardsPayment } from '../../../../components/CardsPayment';
 import { SubHeaderPay } from '../../../../components/SubHeaderPay';
 
 import {
+    Button,
     Container,
 } from './styles';
 
@@ -14,20 +15,23 @@ export function Pagamento1() {
                 amountCentus={99}
             />
             <CardsPayment
-                titlePay='Crédito'
+                typePay='Crédito'
                 img={true}
 
             />
             <CardsPayment
-                titlePay='Débito'
+                typePay='Débito'
+                titlePay='Pague na Entrega'
                 card={true}
-                typePay='Pague na Entrega'
+                
             />
             <CardsPayment
-                titlePay='Dinheiro'
+                titlePay='Pague na Entrega'
                 diner={true}
-                typePay='Pague na Entrega'
+                typePay='Dinheiro'
             />
+
+            
 
         </Container>
     )

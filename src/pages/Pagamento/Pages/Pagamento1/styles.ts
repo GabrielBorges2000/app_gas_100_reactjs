@@ -10,3 +10,19 @@ export const Container = styled.div`
 
     
 `;
+
+export const Button = styled.button`
+    width: 50%;
+    height: 40px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: ${({ theme }) => theme.header};
+    color: ${({ theme }) => theme.white};
+
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+
+`;

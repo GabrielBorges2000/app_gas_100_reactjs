@@ -19,8 +19,6 @@ export function Pagamento() {
         handleClearBag();
     }
 
-
-
     const [stap, setStap] = useState(0);
 
     function handleNext(isNext: boolean = true) {
@@ -36,7 +34,6 @@ export function Pagamento() {
                 />
                 : (stap === 1 ?
                     <HeaderPay
-                        backpay={true}
                         option={true}
                         title="Metodo de Pagamento"
                     />
@@ -84,10 +81,10 @@ export function Pagamento() {
                             <FinalButton>
                                 <PropsButton>
                                     <ButtonContainer>
-                                        <Button type="submit" onClick={handleClearBag} >
+                                        <Button type="submit" onClick={handleClear}>
                                             <CaretRight size={32} />
                                         </Button>
-                                        <TitleButton>Next</TitleButton>
+                                        <TitleButton>Finish</TitleButton>
                                     </ButtonContainer>
                                 </PropsButton>
                             </FinalButton>

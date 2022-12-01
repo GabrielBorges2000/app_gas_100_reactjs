@@ -16,7 +16,7 @@ import { useBag } from '../../hooks/bag';
 
 type Props = {
     titlePay?: string;
-    typePay?: string;
+    typePay: 'Débito' | 'Crédito' | 'Dinheiro';
     img?: boolean;
     card?: boolean;
     diner?: boolean;
@@ -26,28 +26,27 @@ type Props = {
 export function CardsPayment({ typePay, titlePay, img, card, diner }: Props) {
     const { bag, handleUpdateBag } = useBag();
 
-
-    // function handleAdd() {
-    //     handleUpdateBag({
-    //         ...bag,
-    //         titlePay: titlePay,
-    //     })
-    // }
+    function handleAdd() {
+        handleUpdateBag({
+            ...bag,
+            typePay: typePay,
+        })
+    }
 
     return (
         <Container>
             <InfoContainer>
-                <TitleName>{titlePay}</TitleName>
+                <TitleName>{typePay}</TitleName>
                 <ContentContainer>
                     {img && <ImageContainer />}
                     {card && <CreditCard size={32} color="#5F9DF7" />}
                     {diner && <Coins size={32} color="#5F9DF7" />}
 
-                    <Title>{typePay}</Title>
+                    <Title>{titlePay}</Title>
                 </ContentContainer>
             </InfoContainer>
 
-            <ButtonCheck /* onClick={handleAdd} */>
+            <ButtonCheck onClick={handleAdd}>
                 <ControlledCheckbox />
             </ButtonCheck>
         </Container>

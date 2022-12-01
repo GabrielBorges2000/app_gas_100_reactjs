@@ -34,7 +34,7 @@ export function ConfirmacaoDados() {
                 <Store><b>Contato:</b>{bag.phoneDDD} {bag.phoneContact}</Store>
                 <DeliveryLocation><b>Endereço:</b> {bag.location}</DeliveryLocation>
                 <Name><b>Cliente:</b> {bag.name}</Name>
-                <PayFormat><b>Forma de Pagamento:</b> {bag.pay} (Cobrar na entrega)</PayFormat>
+                <PayFormat><b>Forma de Pagamento:</b> {bag.titlePay} (Cobrar na entrega)</PayFormat>
                 <Value><b>Valor:</b> R${bag.valor},{bag.valueCentus}</Value>
                 <Time><b>Tempo estimado para entrega:</b> {bag.timeMinute} - {bag.timeSeconds}min</Time>
                 

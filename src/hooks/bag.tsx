@@ -27,6 +27,7 @@ export type PropsBag = {
     typeCard: 'orange' | 'gray' | 'yellow' | 'green';
     titleName: string;
     titlePay: string;
+    typePay: 'Débito' | 'Crédito' | 'Dinheiro';
 }
 
 type BagContextData = {
@@ -52,6 +53,7 @@ function initialValues() {
         typeCard: 'orange' as 'orange' | 'gray' | 'yellow' | 'green',
         titleName: '',
         titlePay: '',
+        typePay: 'Débito' as 'Débito' | 'Crédito' | 'Dinheiro',
         value: 0,
         valueCentus: 99,
         timeMinute: 15,

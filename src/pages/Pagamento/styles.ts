@@ -3,11 +3,33 @@ import styled from 'styled-components';
 export const Container = styled.div`
     height: 100vh;
     background: ${({ theme }) => theme.background};
+
+    a:link {
+    text-decoration: none;
+    }
+
+    a:visited {
+    text-decoration: none;
+    }
+
+    a:hover {
+    text-decoration: none;
+    }
+
+    a:active {
+    text-decoration: none;
+    }
+
+    a {
+    color: ${({ theme }) => theme.title};
+    }
 `;
 
 export const ContainerPage = styled.div`
     display: flex;
     flex-direction: column;
+
+    background: ${({ theme }) => theme.background};
     
 `;
 
@@ -31,6 +53,8 @@ export const TitleButton = styled.p`
     color: ${({ theme }) => theme.title};
     align-items: center;
     padding-top: 5px;
+    
+    
 
 `;
 export const ButtonContainer = styled.div`
@@ -40,14 +64,14 @@ export const ButtonContainer = styled.div`
 
     background: transparent;
 `;
-export const PropsButton = styled.p`
+export const PropsButton = styled.div`
     margin: 0 5%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 
-
+    
 `;
 
 export const FinalButton = styled.div`

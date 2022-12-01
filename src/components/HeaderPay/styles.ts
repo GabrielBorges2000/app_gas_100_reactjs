@@ -15,7 +15,7 @@ export const Container = styled.div`
 
 `;
 
-export const BackButton = styled.a`
+export const BackButton = styled.button`
 
     background-color: transparent;
     color: ${({ theme }) => theme.white};

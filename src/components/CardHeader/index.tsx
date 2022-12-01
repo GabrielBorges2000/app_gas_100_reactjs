@@ -26,7 +26,7 @@ type Props = {
     typeCard: 'orange' | 'gray' | 'yellow' | 'green';
 }
 
-export function CardHeader({ note, titleClient, logoName, typeCard }: Props) {
+export function CardHeader({ titleClient, typeCard }: Props) {
     const { bag } = useBag();
 
     return (
@@ -38,13 +38,13 @@ export function CardHeader({ note, titleClient, logoName, typeCard }: Props) {
                 <DetailHeader>
                     <Title >{titleClient}</Title>
                     <LogoContainer type={typeCard}>
-                        <Logo >{logoName}</Logo>
+                        <Logo >{bag.logoName}</Logo>
                     </LogoContainer>
                 </DetailHeader>
 
                 <DetailContent>
                     <NoteNumber id="lblNota" >
-                        <b>{note}</b> <Icon src={Star} />
+                        <b>{bag.note}</b> <Icon src={Star} />
                     </NoteNumber>
                     <TimeNumber id="lblTime"><b>{bag.timeMinute}-{bag.timeSeconds}</b> min</TimeNumber>
                     <AmountNumber id="lblAmount">R$<b>{bag.valor}</b>,{bag.valueCentus}</AmountNumber>
