@@ -1,5 +1,5 @@
+import { Star } from 'phosphor-react';
 import { NavLink } from 'react-router-dom';
-import Star from './assets/star.svg'
 import { useBag } from '../../hooks/bag';
 
 import {
@@ -73,7 +73,7 @@ export function StoreCard({ valor, logoName, note, timeMinutes, timeSeconds, tit
                             <NoteContainer>
                                 <Note>Nota</Note>
                                 <NoteNumber id="lblNota" >
-                                    <b>{note}</b> <Icon src={Star} />
+                                    <b>{note}</b> <Icon><Star size={14} weight='fill' color='#F49D1A' /></Icon>
                                 </NoteNumber>
                             </NoteContainer>
                             <TimeContainer>

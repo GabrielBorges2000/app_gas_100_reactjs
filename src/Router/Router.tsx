@@ -12,7 +12,6 @@ export function Router() {
       <Route path="/Cadastro" element={<Cadastro />} />
       <Route path="/CadastroName" element={<CadastroName />} />
       <Route path="/Pagamento" element={<Pagamento />} />
-
     </Routes>
   )
 }
