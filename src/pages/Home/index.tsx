@@ -1,9 +1,6 @@
-import { NavLink } from "react-router-dom";
 import { Header } from "../../components/Header";
 import { StoreCard } from "../../components/StoreCard";
-import { useBag } from "../../hooks/bag";
 import { Container, } from "./styled";
-import {useState} from 'react';
 
 export function Home() {
   return (
