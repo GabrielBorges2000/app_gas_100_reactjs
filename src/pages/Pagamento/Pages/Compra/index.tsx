@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { CardContent } from '../../../../components/CardContent';
 import { CardHeader } from '../../../../components/CardHeader';
 import { SubHeaderPay } from '../../../../components/SubHeaderPay';
@@ -8,7 +7,6 @@ import {
 
     Container,
 } from './styles';
-
 
 export function Compra() {
     const {bag} = useBag();

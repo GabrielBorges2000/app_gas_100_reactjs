@@ -1,5 +1,5 @@
-import { type } from 'os';
-import React, {
+
+import {
     createContext,
     useContext,
     useState,

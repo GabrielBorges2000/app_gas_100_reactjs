@@ -1,7 +1,6 @@
 import { CaretLeft, CaretRight } from 'phosphor-react';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Gas from '../../assets/Gas.png'
-import { InputHTMLAttributes } from 'react';
 
 import {
     Button,
@@ -39,7 +38,7 @@ export function CadastroName() {
                     timeMinutes={bag.timeMinute}
                     timeSeconds={bag.timeSeconds}
                     valor={bag.valor}
-                    />
+                />
             </Card>
 
             <InputName

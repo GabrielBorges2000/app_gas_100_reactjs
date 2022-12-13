@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { CaretLeft, Question } from 'phosphor-react';
 import { NavLink } from 'react-router-dom';
 
@@ -16,11 +15,6 @@ type Props = {
 }
 
 export function HeaderPay({ title, back, option }: Props) {
-    const [stap, setStap] = useState(0);
-
-    function handleNext(isNext: boolean = true) {
-        setStap(isNext ? stap + 1 : stap - 1);
-    }
 
     return (
         <Container>

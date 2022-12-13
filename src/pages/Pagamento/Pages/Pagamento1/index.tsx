@@ -2,7 +2,6 @@ import { CardsPayment } from '../../../../components/CardsPayment';
 import { SubHeaderPay } from '../../../../components/SubHeaderPay';
 
 import {
-    Button,
     Container,
 } from './styles';
 
@@ -30,8 +29,6 @@ export function Pagamento1() {
                 diner={true}
                 typePay='Dinheiro'
             />
-
-            
 
         </Container>
     )

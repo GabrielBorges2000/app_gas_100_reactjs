@@ -5,7 +5,6 @@ import Elo from '../../assets/Elo.svg'
 import {
 Container, ImgContainer, Logoimage,
 } from './styles';
-import { PropsFor } from '@mui/system';
 
 type Props = {
     title?: string;
