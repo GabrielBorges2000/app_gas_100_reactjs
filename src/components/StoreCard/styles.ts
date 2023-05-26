@@ -66,35 +66,7 @@ export const Title = styled.p`
     color: ${({ theme }) => theme.text};
 
 `;
-export const LogoContainer = styled.p<StoreCardProps>`
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    color: ${({ theme }) => theme.white};
 
-    ${({ type }) => type === 'orange' && css`
-    background: ${({theme}) => theme.orange};
-    `};
-
-    ${({ type }) => type === 'gray' && css`
-    background: ${({theme}) => theme.text};
-    `};
-
-    ${({ type }) => type === 'yellow' && css`
-    background: ${({theme}) => theme.yellow};
-    `};
-
-    ${({ type }) => type === 'green' && css`
-    background: ${({theme}) => theme.green};
-    `};
-
-
-
-`;
 
 export const Logo = styled.p`
        
@@ -151,7 +123,7 @@ export const NoteNumber = styled.p`
     }
 `;
 
-export const Icon = styled.img`
+export const Icon = styled.div`
     width: 15px;
 
     display: flex;
@@ -199,4 +171,34 @@ export const AmountNumber = styled.p`
     @media (max-width: 720px) {
         font-size: 14px;
     }
+`;
+
+export const LogoContainer = styled.div<StoreCardProps>`
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: ${({ theme }) => theme.white};
+
+    ${({ type }) => type === 'orange' && css`
+    background: ${({ theme }) => theme.orange};
+    `};
+
+    ${({ type }) => type === 'gray' && css`
+    background: ${({ theme }) => theme.text};
+    `};
+
+    ${({ type }) => type === 'yellow' && css`
+    background: ${({ theme }) => theme.yellow};
+    `};
+
+    ${({ type }) => type === 'green' && css`
+    background: ${({ theme }) => theme.green};
+    `};
+
+
+
 `;

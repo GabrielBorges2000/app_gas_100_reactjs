@@ -1,4 +1,3 @@
-import React from 'react';
 import Concluido from '../../assets/concluido.png'
 import { useBag } from '../../hooks/bag';
 
